@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "WenKai";
+  src: url("font/WenKai.ttf") format("truetype");
+}
+@layer base {
+  html {
+    font-family: "WenKai", "FangSong", system-ui, sans-serif;
+  }
+}
