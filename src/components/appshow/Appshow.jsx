@@ -42,8 +42,8 @@ export const Appshow = () => {
               科技赋能，为产品带来灵魂。
             </span>
             <img
-              src="https://telegraph-image-6cq.pages.dev/file/8ae144ba00037bbe22caa.png"
-              alt=""
+              src="https://telegraph-image-6cq.pages.dev/file/195c76855bd7ec7ff0bc0.png"
+              alt="N"
             />
           </div>
           {datas.map((item) => (

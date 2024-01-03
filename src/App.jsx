@@ -15,9 +15,21 @@ import "./index.css";
 }
 import { Home } from "./components/home/Home";
 {
-  /*导入宣传语页面 */
+  /*导入个人介绍 */
+}
+import { Introduction } from "./components/introduction/Introduction";
+{
+  /*导入标语页面 */
 }
 import { Middle } from "./components/middle/Middle";
+{
+  /*导入目录页面 */
+}
+import { Catalogue } from "./components/catalogue/Catalogue";
+{
+  /*导入年度作品展示 */
+}
+import { AnnualDisplay } from "./components/annualDisplay/AnnualDisplay";
 {
   /*导入文章推荐 */
 }
@@ -30,16 +42,28 @@ import { Appshow } from "./components/appshow/Appshow";
   /*导入奖项展示 */
 }
 import { Awards } from "./components/appshow/Awards";
+{
+  /*导入摄影展示 */
+}
+import { Photoshow } from "./components/photoshow/Photoshow";
 
 export const App = () => {
   return (
     <div>
-      <section className="h-screen">
+      <section>
         <Home />
       </section>
-
+      <section>
+        <Introduction />
+      </section>
+      <section>
+        <Catalogue />
+      </section>
       <section>
         <Middle />
+      </section>
+      <section>
+        <AnnualDisplay />
       </section>
       <section>
         <Article />
@@ -49,6 +73,9 @@ export const App = () => {
       </section>
       <section>
         <Awards />
+      </section>
+      <section>
+        <Photoshow />
       </section>
     </div>
   );

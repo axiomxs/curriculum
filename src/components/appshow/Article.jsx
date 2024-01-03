@@ -42,8 +42,8 @@ export const Article = () => {
               探索科技奥秘。
             </span>
             <img
-              src="https://telegraph-image-6cq.pages.dev/file/b260d3ca7c7a961b61474.png"
-              alt=""
+              src="https://telegraph-image-6cq.pages.dev/file/8ae144ba00037bbe22caa.png"
+              alt="I"
             />
           </div>
           {datas.map((item) => (
