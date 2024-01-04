@@ -43,9 +43,17 @@ import { Appshow } from "./components/appshow/Appshow";
 }
 import { Awards } from "./components/appshow/Awards";
 {
+  /*导入引导二 */
+}
+import { GuideTwo } from "./components/guideTwo/ GuideTwo";
+{
   /*导入摄影展示 */
 }
 import { Photoshow } from "./components/photoshow/Photoshow";
+{
+  /*导入底部 */
+}
+import { Bottom } from "./components/bottom/Bottom";
 
 export const App = () => {
   return (
@@ -75,7 +83,13 @@ export const App = () => {
         <Awards />
       </section>
       <section>
+        <GuideTwo />
+      </section>
+      <section>
         <Photoshow />
+      </section>
+      <section>
+        <Bottom />
       </section>
     </div>
   );
