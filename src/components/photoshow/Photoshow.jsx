@@ -5,7 +5,7 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 export const Photoshow = () => {
   return (
-    <div className="bg-[#fafafc] flex  justify-center px-4 sm:px-14 pb-32 pt-14">
+    <div className="bg-[#fafafc] h-fit flex justify-center px-4 sm:px-14 pb-32 pt-14">
       <div className="flex flex-col lg:flex-row px-8 container mx-auto">
         <div className="w-full lg:w-1/2 h-fit">
           <div className="flex flex-col gap-10 lg:mr-5">
@@ -31,7 +31,7 @@ export const Photoshow = () => {
             />
           </div>
         </div>
-        <div className="w-full lg:w-1/2 h-screen">
+        <div className="w-full lg:w-1/2 h-fit">
           <div className="flex flex-col gap-10 mt-16 lg:ml-5">
             <img
               src="https://telegraph-image-6cq.pages.dev/file/c02d35e456f70a875d97e.jpg"
