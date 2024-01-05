@@ -28,7 +28,7 @@ export const Appshow = () => {
         variants={states}
         whileInView="visible"
         initial="hidden"
-        className="w-full m-0 pt-4 sm:pt-20 container mx-auto px-4 sm:px-14"
+        className="w-full m-0 pt-4 sm:pt-20 lg:pt-32 container mx-auto px-4 sm:px-14"
       >
         <span className="text-2xl sm:text-3xl lg:text-5xl pt-16 font-bold text-[#e30000]">
           项目，
@@ -36,7 +36,7 @@ export const Appshow = () => {
         <span className="text-2xl sm:text-3xl lg:text-5xl text-[#6e6e73]">
           用心和创意构建项目、构建体验！
         </span>
-        <div className="carousel carousel-center w-full px-4 pb-14 pt-10 space-x-6 rounded-box h-full">
+        <div className="carousel carousel-center w-full px-4 pb-14 pt-14 space-x-6 rounded-box h-full">
           <div className="carousel-item rounded-2xl h-[454px] w-[260px] sm:h-[505px] sm:w-[404px] p-8 overflow-hidden shadow-xl cursor-pointer flex flex-col relative bg-black scale-100 transition duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl shadow-[2px_4px_16px_rgba(0, 0, 0, 0.16)]">
             <span className="text-white text-2xl sm:text-3xl pt-10">
               科技赋能，为产品带来灵魂。

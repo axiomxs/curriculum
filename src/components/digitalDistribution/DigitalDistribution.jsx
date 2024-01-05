@@ -1,38 +1,13 @@
 import React from "react";
 import datas from "../json/digital.json";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import left from "../../icon/icon_wheat_left.svg";
 import right from "../../icon/icon_wheat_right.svg";
 
 export const DigitalDistribution = () => {
-  {
-    /*动画 */
-  }
-  const states = {
-    visible: {
-      y: 0,
-      opacity: 1,
-
-      transition: {
-        type: "tween",
-        duration: 1,
-      },
-    },
-    hidden: {
-      y: 50,
-      opacity: 0,
-    },
-  };
-
   return (
     <div className="bg-[#fafafc] w-full h-fit">
-      <motion.div
-        variants={states}
-        whileInView="visible"
-        initial="hidden"
-        className="w-full m-0 pt-4 sm:pt-14 container mx-auto px-4 sm:px-14 pb-16"
-      >
+      <div className="w-full m-0 pt-4 sm:pt-14 container mx-auto px-4 sm:px-14 pb-16">
         <div className="flex justify-center">
           <img src={left} />
           <span className="text-2xl sm:text-3xl lg:text-5xl pt-2 font-bold text-[#e30000]">
@@ -55,13 +30,13 @@ export const DigitalDistribution = () => {
               </div>
               <div className="absolute transition-all duration-500 ease-in-out right-0 -bottom-20 group-hover:bottom-0 left-0">
                 <div className="h-fit w-full p-4 bg-yellow-400">
-                    <span className="text-xl text-black">{item.date}</span>
+                  <span className="text-xl text-black">{item.date}</span>
                 </div>
               </div>
             </Link>
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
