@@ -63,7 +63,7 @@ export const Article = () => {
               </div>
               <div className="h-1/3 w-full flex flex-col justify-center">
                 <span className="text-[#e30000] text-xl">{item.title}</span>
-                <span className="text-black text-xl pt-4">
+                <span className="text-black text-xl pt-4 text-ellipsis overflow-hidden mb-4">
                   {item.introduce}
                 </span>
               </div>

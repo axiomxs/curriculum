@@ -85,10 +85,10 @@ export const Catalogue = () => {
                 摄影展示
               </span>
               <span className="text-[#6e6e73] text-xl lg:text-2xl whitespace-nowrap rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 p-1 transition-all duration-300 ease-in-out w-fit mb-4">
-                人文
+                人间烟火
               </span>
               <span className="text-[#6e6e73] text-xl lg:text-2xl whitespace-nowrap rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 p-1 transition-all duration-300 ease-in-out w-fit mb-4">
-                景物
+                风火山林
               </span>
               <span className="text-[#6e6e73] text-xl lg:text-2xl whitespace-nowrap rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 p-1 transition-all duration-300 ease-in-out w-fit mb-4">
                 其他

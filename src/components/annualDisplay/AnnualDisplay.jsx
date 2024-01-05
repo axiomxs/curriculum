@@ -1,5 +1,5 @@
 import React from "react";
-import datas from "../json/appshow.json";
+import datas from "../json/annualdisplay.json";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -63,7 +63,7 @@ export const AnnualDisplay = () => {
               </div>
               <div className="h-1/3 w-full flex flex-col justify-center">
                 <span className="text-[#e30000] text-xl">{item.title}</span>
-                <span className="text-black text-xl pt-4">
+                <span className="text-black text-xl pt-4 text-ellipsis overflow-hidden mb-4">
                   {item.introduce}
                 </span>
               </div>

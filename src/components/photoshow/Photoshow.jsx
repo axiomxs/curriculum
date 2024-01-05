@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 export const Photoshow = () => {
   return (
@@ -12,10 +15,12 @@ export const Photoshow = () => {
             <span className="text-black text-2xl sm:text-3xl lg:text-4xl font-bold -mt-6 mb-6">
               作品展示
             </span>
+
             <img
               src="https://telegraph-image-6cq.pages.dev/file/d915abe89a0e43ed81a06.jpg"
               className="w-full object-cover"
             />
+
             <img
               src="https://telegraph-image-6cq.pages.dev/file/923cddb133323b5d01f9c.jpg"
               className="w-full object-cover"

@@ -57,7 +57,7 @@ import { Bottom } from "./components/bottom/Bottom";
 
 export const App = () => {
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       <section>
         <Home />
       </section>
