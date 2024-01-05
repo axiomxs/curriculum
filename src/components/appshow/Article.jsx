@@ -30,10 +30,10 @@ export const Article = () => {
         initial="hidden"
         className="w-full m-0 pt-4 lg:pt-20 container mx-auto px-4 sm:px-14"
       >
-        <span className="text-2xl sm:text-3xl pt-16 font-bold text-[#e30000]">
+        <span className="text-2xl sm:text-3xl lg:text-5xl pt-16 font-bold text-[#e30000]">
           文章，
         </span>
-        <span className="text-2xl sm:text-3xl text-[#6e6e73]">
+        <span className="text-2xl sm:text-3xl lg:text-5xl text-[#6e6e73]">
           引领未来之路！
         </span>
         <div className="carousel carousel-center w-full px-4 pb-14 pt-10 space-x-6 rounded-box h-full">
@@ -57,8 +57,6 @@ export const Article = () => {
                 <img
                   className="rounded-box h-auto w-auto overflow-hidden object-cover transition-all duration-500 ease-in-out opacity-100 md:group-hover:scale-105 md:group-hover:opacity-90 transform-gpu"
                   src={item.img}
-                  alt="product-icon"
-                  title="product-icon"
                 />
               </div>
               <div className="h-1/3 w-full flex flex-col justify-center">

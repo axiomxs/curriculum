@@ -28,7 +28,7 @@ export const Introduction = () => {
           variants={states}
           whileInView="visible"
           initial="hidden"
-          className="w-full lg:w-1/3 h-screen flex flex-col justify-center items-center"
+          className="w-full lg:w-1/3 h-fit lg:h-screen mt-20 lg:mt-0 flex flex-col justify-center items-center"
         >
           <p className="text-black text-5xl mb-6 font-black">灵</p>
           <p className="text-black text-5xl font-black">绝</p>
@@ -39,7 +39,7 @@ export const Introduction = () => {
             className="rounded-full w-48 h-48 object-cover"
           />
         </motion.div>
-        <div className="w-full lg:w-2/3 h-screen flex justify-center items-center">
+        <div className="w-full lg:w-2/3 h-fit lg:h-screen my-20 lg:my-0 flex justify-center items-center">
           <div className="w-fit h-fit flex flex-col border border-[#e3e8f7] bg-white p-14 rounded-2xl transition-all duration-300 ease-in-out hover:border-rose-400 shadow-[0_8px_16px_-4px_rgba(102, 68, 68, 0.00)]">
             <div>
               <motion.span

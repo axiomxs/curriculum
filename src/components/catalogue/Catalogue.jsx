@@ -67,6 +67,9 @@ export const Catalogue = () => {
                 UI设计
               </span>
               <span className="text-[#6e6e73] text-xl lg:text-2xl whitespace-nowrap rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 p-1 transition-all duration-300 ease-in-out w-fit mb-4">
+                数字发行物
+              </span>
+              <span className="text-[#6e6e73] text-xl lg:text-2xl whitespace-nowrap rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 p-1 transition-all duration-300 ease-in-out w-fit mb-4">
                 视觉设计
               </span>
               <span className="text-[#6e6e73] text-xl lg:text-2xl whitespace-nowrap rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 p-1 transition-all duration-300 ease-in-out w-fit mb-4">

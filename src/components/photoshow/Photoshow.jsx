@@ -9,7 +9,7 @@ export const Photoshow = () => {
       <div className="flex flex-col lg:flex-row px-8 container mx-auto">
         <div className="w-full lg:w-1/2 h-fit">
           <div className="flex flex-col gap-10 lg:mr-5">
-            <span className="text-[#e30000] text-2xl sm:text-3xl lg:text-4xl font-bold">
+            <span className="text-[#e30000] text-2xl sm:text-3xl lg:text-5xl font-bold">
               PhotoShow
             </span>
             <span className="text-black text-2xl sm:text-3xl lg:text-4xl font-bold -mt-6 mb-6">

@@ -30,10 +30,10 @@ export const AnnualDisplay = () => {
         initial="hidden"
         className="w-full m-0 pt-4 sm:pt-20 container mx-auto px-4 sm:px-14"
       >
-        <span className="text-2xl sm:text-3xl pt-16 font-bold text-[#e30000]">
+        <span className="text-2xl sm:text-3xl lg:text-5xl pt-16 font-bold text-[#e30000]">
           年度作品展示，
         </span>
-        <span className="text-2xl sm:text-3xl text-[#6e6e73]">
+        <span className="text-2xl sm:text-3xl lg:text-5xl text-[#6e6e73]">
           创意无限进步！
         </span>
         <div className="carousel carousel-center w-full px-4 pb-14 pt-10 space-x-6 rounded-box h-full">
@@ -50,15 +50,13 @@ export const AnnualDisplay = () => {
           {datas.map((item) => (
             <Link
               to={item.show}
-              className="group carousel-item rounded-2xl h-[454px] w-[260px] sm:h-[500px] sm:w-[313px] p-8 overflow-hidden shadow-xl cursor-pointer flex flex-col relative bg-[#fff] scale-100 transition duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl group-hover:hidden"
+              className="group carousel-item rounded-2xl h-[454px] w-[260px] sm:h-[500px] sm:w-[313px] p-8 overflow-hidden shadow-xl cursor-pointer flex flex-col relative bg-[#fff] scale-100 transition duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl"
               key={item.id}
             >
               <div className="h-2/3 w-full flex justify-center items-center">
                 <img
                   className="rounded-box h-auto w-auto overflow-hidden object-cover transition-all duration-500 ease-in-out opacity-100 md:group-hover:scale-105 md:group-hover:opacity-90 transform-gpu"
                   src={item.img}
-                  alt="product-icon"
-                  title="product-icon"
                 />
               </div>
               <div className="h-1/3 w-full flex flex-col justify-center">
