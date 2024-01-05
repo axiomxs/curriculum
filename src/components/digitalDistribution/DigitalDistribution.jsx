@@ -19,7 +19,7 @@ export const DigitalDistribution = () => {
           {datas.map((item) => (
             <Link
               to={item.show}
-              className="group carousel-item rounded-2xl h-[454px] w-[260px] sm:h-[500px] sm:w-[313px] overflow-hidden shadow-xl cursor-pointer flex flex-col relative bg-[#fff] scale-100 transition duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl"
+              className="group carousel-item rounded-xl h-[390px] w-[260px] sm:h-[440px] sm:w-[310px] overflow-hidden shadow-xl cursor-pointer flex flex-col relative bg-[#fff] scale-100 transition duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl"
               key={item.id}
             >
               <div className="h-full w-full flex justify-center items-center">
