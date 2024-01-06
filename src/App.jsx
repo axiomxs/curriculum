@@ -51,6 +51,10 @@ import { GuideTwo } from "./components/guideTwo/ GuideTwo";
 }
 import { DigitalDistribution } from "./components/digitalDistribution/DigitalDistribution";
 {
+  /*导入引导三 */
+}
+import { GuideThree } from "./components/ guideThree/ GuideThree";
+{
   /*导入摄影展示 */
 }
 import { Photoshow } from "./components/photoshow/Photoshow";
@@ -58,7 +62,6 @@ import { Photoshow } from "./components/photoshow/Photoshow";
   /*导入底部 */
 }
 import { Bottom } from "./components/bottom/Bottom";
-
 
 export const App = () => {
   return (
@@ -92,6 +95,9 @@ export const App = () => {
       </section>
       <section>
         <DigitalDistribution />
+      </section>
+      <section>
+        <GuideThree />
       </section>
       <section>
         <Photoshow />
