@@ -2,26 +2,58 @@
   /*导入基础部分 */
 }
 import React from "react";
+import { motion } from "framer-motion";
 
 export const Middle = () => {
+  {
+    /*动画 */
+  }
+  const states = {
+    visible: {
+      opacity: 1,
+
+      transition: {
+        type: "tween",
+        duration: 2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+    },
+  };
   return (
-    <div className="bg-[#fafafc] flex justify-center pt-20">
-      <div className="flex flex-col items-center py-6 px-8 mb-10 sm:mb-16 lg:mb-32 mx-6 bg-white rounded-xl leading-6  max-w-[1200px] container mx-auto  border border-[#e3e8f7] transition-all duration-300 ease-in-out hover:border-rose-400 shadow-[0_8px_16px_-4px_rgba(102, 68, 68, 0.00)]">
-        <span className="flex text-center text-xl sm:text-xl lg:text-2xl text-black leading-relaxed tracking-widest py-2">
-          “命中注定
+    <div className="flex justify-center bg-[#fafafc]">
+      <div className="flex flex-col items-center mb-10 sm:mb-16 lg:mb-24 container mx-auto py-6 px-8 transition-all duration-300 ease-in-out ">
+        <motion.p
+          variants={states}
+          whileInView="visible"
+          initial="hidden"
+          className="text-center text-xl sm:text-2xl lg:text-5xl text-black font-semibold tracking-widest pt-12"
+        >
+          命中注定
           <br />
           本该如此
-          <br />
+        </motion.p>
+        <motion.p
+          variants={states}
+          whileInView="visible"
+          initial="hidden"
+          className="text-center text-xl sm:text-2xl lg:text-5xl text-black font-semibold tracking-widest pt-12"
+        >
           人间缱绻模样
           <br />
           不忘痴狂
-          <br />
-          万山载雪渡月光
-          <br />
+        </motion.p>
+        <motion.p
+          variants={states}
+          whileInView="visible"
+          initial="hidden"
+          className="text-center text-xl sm:text-2xl lg:text-5xl text-black font-semibold tracking-widest pt-12"
+        >
           烛火幽微
           <br />
-          人潮跌宕”
-        </span>
+          人潮跌宕
+        </motion.p>
       </div>
     </div>
   );

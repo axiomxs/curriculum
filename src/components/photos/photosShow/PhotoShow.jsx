@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-export const Photoshow = () => {
+export const PhotosShow = () => {
   return (
     <div className="bg-[#fafafc] h-fit flex justify-center px-4 sm:px-14 pb-32 pt-14">
       <div className="flex flex-col lg:flex-row px-8 container mx-auto">

@@ -31,7 +31,6 @@
     "react-native": "^0.72.6",
     "react-router": "^6.17.0",
     "react-router-dom": "^6.17.0",
-    "react-svg": "^16.1.29",
     "sass": "^1.69.4",
     "theme-change": "^2.5.0"
   },

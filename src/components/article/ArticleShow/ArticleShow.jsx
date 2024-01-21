@@ -1,9 +1,9 @@
 import React from "react";
-import datas from "../json/article.json";
+import datas from "../../json/article.json";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export const Article = () => {
+export const ArticleShow = () => {
   {
     /*动画 */
   }

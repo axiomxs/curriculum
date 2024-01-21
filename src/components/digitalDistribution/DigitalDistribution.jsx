@@ -1,3 +1,9 @@
+{
+  /*数字发行物组件 */
+}
+{
+  /*导入 React、Link、motion动画 */
+}
 import React from "react";
 import datas from "../json/digital.json";
 import { Link } from "react-router-dom";
