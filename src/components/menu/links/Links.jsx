@@ -1,24 +1,111 @@
 {
+  /*菜单 - 链接组件 */
+}
+{
   /*导入React */
 }
 import React from "react";
+{
+  /*导入motion动画 */
+}
+import { motion } from "framer-motion";
 
 export const Links = () => {
+  {
+    /*链接文字动画 */
+  }
+  const variants = {
+    open: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+    close: {
+      transition: {
+        staggerChildren: 0.05,
+        staggerDirection: -1,
+      },
+    },
+  };
+  const itemVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+    },
+    close: {
+      y: 50,
+      opacity: 0,
+    },
+  };
   return (
-    <div className="absolute flex flex-col justify-center items-center gap-5 w-full h-full text-black text-2xl">
-      <a
+    <motion.div
+      className="absolute flex flex-col justify-center items-center gap-5 w-full h-full text-black text-2xl"
+      variants={variants}
+    >
+      <motion.a
         href="/#"
-        className="transition-all duration-300 ease-in-out hover:scale-110"
+        variants={itemVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
       >
         主页
-      </a>
-      <a href="/#/project">项目</a>
-      <a href="/#/article">文章</a>
-      <a href="/#/awards">奖项</a>
-      <a href="/#/digital">数字出版</a>
-      <a href="/#/photos">照片展示</a>
-      <a href="/#/collection">数字藏品</a>
-      <a href="/#/contact">联系我</a>
-    </div>
+      </motion.a>
+      <motion.a
+        href="/#/project"
+        variants={itemVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        项目
+      </motion.a>
+      <motion.a
+        href="/#/article"
+        variants={itemVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        文章
+      </motion.a>
+      <motion.a
+        href="/#/awards"
+        variants={itemVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        奖项
+      </motion.a>
+      <motion.a
+        href="/#/digital"
+        variants={itemVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        数字出版
+      </motion.a>
+      <motion.a
+        href="/#/photos"
+        variants={itemVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        照片展示
+      </motion.a>
+      <motion.a
+        href="/#/collection"
+        variants={itemVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        数字藏品
+      </motion.a>
+      <motion.a
+        href="/#/contact"
+        variants={itemVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        联系我
+      </motion.a>
+    </motion.div>
   );
 };

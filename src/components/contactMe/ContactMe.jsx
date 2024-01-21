@@ -102,6 +102,10 @@ export const ContactMe = () => {
             <br />
             请我和我联系吧!
           </span>
+          <img
+            src="https://telegraph-image-6cq.pages.dev/file/eae58447dfd0349d91637.png"
+            className="hidden sm:hidden lg:block absolute top-40 left-[370px] w-40 h-40"
+          />
         </div>
       </header>
       <div className="w-fit lg:w-full h-fit container mx-auto px-8 ">
