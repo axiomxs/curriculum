@@ -51,13 +51,13 @@ export const ContactMe = () => {
       imgRef.current.style.transform = `scale(${scaleValue})`;
     };
     {
-      /*scrollHandler函数：
+      /*handleScroll函数：
       作为滚轮滚动事件的回调函数，
       在事件触发时更新scrollDistance的状态，
       并通过requestAnimationFrame优化渲染性能，
       同时返回一个清除函数，用于取消当前的动画帧请求 */
     }
-    const scrollHandler = (event) => {
+    const handleScroll = (event) => {
       if (event.deltaY < 0) {
         setScrollDistance(Math.max(0, scrollDistance + event.deltaY));
       } else {
@@ -74,10 +74,10 @@ export const ContactMe = () => {
       /*在effect内部添加“wheel”事件监听器到window对象上，
       当组件卸载时，通过返回的清理函数移除事件监听器 */
     }
-    window.addEventListener("wheel", scrollHandler);
+    window.addEventListener("wheel", handleScroll);
 
     return () => {
-      window.removeEventListener("wheel", scrollHandler);
+      window.removeEventListener("wheel", handleScroll);
     };
     {
       /*每当scrollDistance数值发生变化时，effect都会执行一次 */
