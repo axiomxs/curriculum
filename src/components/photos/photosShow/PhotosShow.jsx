@@ -10,6 +10,10 @@ import React, { useState, useEffect } from "react";
 }
 import { motion } from "framer-motion";
 {
+  /*导入懒加载 */
+}
+import LazyLoad from "react-lazyload";
+{
   /*导入图片展示数据 */
 }
 import datas from "../../json/photosShow.json";
@@ -79,46 +83,47 @@ export const PhotosShow = () => {
     >
       {/*使用map遍历，并通过对id的奇偶区分，分别设置样式，实现【图片 + 文字】块棋格布局 */}
       {datas.map((item) => (
-        <div
-          className={`flex mb-6 lg:mb-0 ${
-            item.id % 2 === 0
-              ? "flex-col lg:flex-row-reverse"
-              : "flex-col lg:flex-row"
-          }`}
-          key={item.id}
-        >
-          <div className="w-full lg:w-1/2 lg:h-[650px]">
-            <img
-              src="https://telegraph-image-6cq.pages.dev/file/1991400a9153aa8a44e8e.jpg"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          {/*通过对id的奇偶区分，分别设置样式，实现【文字】块棋格布局 */}
+        <LazyLoad height={605} key={item.id}>
           <div
-            className={`flex flex-col lg:justify-center items-center sm:items-center  w-full lg:w-1/2 h-fit lg:h-[650px] py-12 lg:py-0 px-12 bg-[#fafafc] ${
-              item.id % 2 === 0 ? "lg:items-end" : "lg:items-start"
+            className={`flex mb-6 lg:mb-0 ${
+              item.id % 2 === 0
+                ? "flex-col lg:flex-row-reverse"
+                : "flex-col lg:flex-row"
             }`}
           >
-            <p className="text-black text-base lg:text-xl">{item.author}</p>
-            <div className="my-8 lg:my-14 leading-10">
-              <span className="bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out text-black text-wrap text-4xl lg:text-5xl hover:bg-[length:100%_30%]">
-                {item.title}
-              </span>
+            <div className="w-full lg:w-1/2 lg:h-[650px]">
+              <img
+                src="https://telegraph-image-6cq.pages.dev/file/1991400a9153aa8a44e8e.jpg"
+                className="w-full h-full object-cover"
+              />
             </div>
+            {/*通过对id的奇偶区分，分别设置样式，实现【文字】块棋格布局 */}
+            <div
+              className={`flex flex-col lg:justify-center items-center sm:items-center  w-full lg:w-1/2 h-fit lg:h-[650px] py-12 lg:py-0 px-12 bg-[#fafafc] ${
+                item.id % 2 === 0 ? "lg:items-end" : "lg:items-start"
+              }`}
+            >
+              <p className="text-black text-base lg:text-xl">{item.author}</p>
+              <div className="my-8 lg:my-14 leading-10">
+                <span className="bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out text-black text-wrap text-4xl lg:text-5xl hover:bg-[length:100%_30%]">
+                  {item.title}
+                </span>
+              </div>
 
-            <p className="text-black text-base text-center lg:text-left">
-              {item.introduce}
-            </p>
-            <div className="flex gap-2.5 mt-8 lg:mt-14">
-              <p className="text-black p-1 rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out">
-                摄影
+              <p className="text-black text-base text-center lg:text-left">
+                {item.introduce}
               </p>
-              <p className="text-black p-1 rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out">
-                旅拍
-              </p>
+              <div className="flex gap-2.5 mt-8 lg:mt-14">
+                <p className="text-black p-1 rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out">
+                  摄影
+                </p>
+                <p className="text-black p-1 rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out">
+                  旅拍
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </LazyLoad>
       ))}
     </motion.div>
   );
