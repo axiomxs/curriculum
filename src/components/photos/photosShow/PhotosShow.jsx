@@ -92,10 +92,7 @@ export const PhotosShow = () => {
             }`}
           >
             <div className="w-full lg:w-1/2 lg:h-[650px]">
-              <img
-                src="https://telegraph-image-6cq.pages.dev/file/1991400a9153aa8a44e8e.jpg"
-                className="w-full h-full object-cover"
-              />
+              <img src={item.img} className="w-full h-full object-cover" />
             </div>
             {/*通过对id的奇偶区分，分别设置样式，实现【文字】块棋格布局 */}
             <div
