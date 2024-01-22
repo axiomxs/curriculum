@@ -2,14 +2,18 @@
   /*路由 */
 }
 {
-  /*导入 React、ReactDOM、Route路由 */
+  /*导入 React、useEffect、ReactDOM、Route路由 */
 }
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter, Routes, Route } from "react-router-dom";
 {
   /*导入组件*/
 }
+{
+  /*导入滚动到顶部组件*/
+}
+import { ScrollToTop } from "./ScrollToTop.jsx";
 {
   /*导入导航栏组件*/
 }
@@ -49,17 +53,19 @@ import { ContactMe } from "./components/contactMe/ContactMe.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <HashRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/project" element={<Project />}></Route>
-        <Route path="/article" element={<Article />}></Route>
-        <Route path="/awards" element={<Awards />}></Route>
-        <Route path="/digital" element={<DigitalDistribution />}></Route>
-        <Route path="/photos" element={<Photos />}></Route>
-        <Route path="/collection" element={<DigitalCollection />}></Route>
-        <Route path="/contact" element={<ContactMe />}></Route>
-      </Route>
-    </Routes>
+    <ScrollToTop>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/project" element={<Project />}></Route>
+          <Route path="/article" element={<Article />}></Route>
+          <Route path="/awards" element={<Awards />}></Route>
+          <Route path="/digital" element={<DigitalDistribution />}></Route>
+          <Route path="/photos" element={<Photos />}></Route>
+          <Route path="/collection" element={<DigitalCollection />}></Route>
+          <Route path="/contact" element={<ContactMe />}></Route>
+        </Route>
+      </Routes>
+    </ScrollToTop>
   </HashRouter>
 );
