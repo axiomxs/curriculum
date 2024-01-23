@@ -20,15 +20,17 @@ export const ContactMe = () => {
   }
   const headerRef = React.useRef(null);
   const imgRef = React.useRef(null);
-
   {
-    /*滚动事件监听与视差效果 */
+    /*
+    滚动事件监听与视差效果
+    使用 useThrottleEffect 进行节流处理
+    */
   }
   useEffect(() => {
     {
       /*updateHeaderClipPath函数：
-      根据当前滚动距离计算header的clip-path属性值以及img元素的缩放比例，
-      然后直接修改DOM元素的样式 */
+        根据当前滚动距离计算header的clip-path属性值以及img元素的缩放比例，
+        然后直接修改DOM元素的样式 */
     }
     const updateHeaderClipPath = () => {
       {
@@ -52,10 +54,9 @@ export const ContactMe = () => {
     };
     {
       /*handleScroll函数：
-      作为滚轮滚动事件的回调函数，
-      在事件触发时更新scrollDistance的状态，
-      并通过requestAnimationFrame优化渲染性能，
-      同时返回一个清除函数，用于取消当前的动画帧请求 */
+        作为滚轮滚动事件的回调函数，
+        在事件触发时更新scrollDistance的状态，
+        同时返回一个清除函数，用于取消当前的动画帧请求 */
     }
     const handleScroll = (event) => {
       if (event.deltaY < 0) {
@@ -64,18 +65,21 @@ export const ContactMe = () => {
         setScrollDistance(Math.min(600, scrollDistance + event.deltaY));
       }
 
-      // 使用requestAnimationFrame优化渲染
+      {
+        /*使用requestAnimationFrame优化渲染*/
+      }
       let requestId = window.requestAnimationFrame(() => {
         updateHeaderClipPath();
       });
       return () => window.cancelAnimationFrame(requestId);
     };
     {
-      /*在effect内部添加“wheel”事件监听器到window对象上，
-      当组件卸载时，通过返回的清理函数移除事件监听器 */
+      /*添加 wheel 事件监听器 */
     }
     window.addEventListener("wheel", handleScroll);
-
+    {
+      /*当组件卸载时，通过返回的清理函数移除事件监听器 */
+    }
     return () => {
       window.removeEventListener("wheel", handleScroll);
     };
@@ -139,20 +143,20 @@ export const ContactMe = () => {
             <form onSubmit="/" className="w-full sm:w-full lg:w-[700px]">
               <input
                 type="text"
-                className="py-3 px-6 lg:px-8 w-full h-[60px] sm:h-[70px] lg:h-[80px] border border-[#d6d6d6] bg-white text-black input-text text-xl rounded-lg transition duration-500 ease-in-out hover:border-pink-500"
+                className="py-3 px-6 lg:px-8 w-full h-[60px] sm:h-[70px] lg:h-[80px] border border-[#d6d6d6] bg-white text-black input-text text-xl rounded-lg transition duration-500 ease-in-out transform-gpu hover:border-pink-500"
                 id="username"
                 placeholder="您的名字"
               />
               <input
                 type="text"
-                className="mt-8 py-3 px-6 lg:px-8 w-full h-[60px] sm:h-[70px] lg:h-[80px] border border-[#d6d6d6] bg-white text-black input-text text-xl rounded-lg transition duration-500 ease-in-out hover:border-pink-500"
+                className="mt-8 py-3 px-6 lg:px-8 w-full h-[60px] sm:h-[70px] lg:h-[80px] border border-[#d6d6d6] bg-white text-black input-text text-xl rounded-lg transition duration-500 ease-in-out transform-gpu hover:border-pink-500"
                 id="email"
                 placeholder="您的邮箱"
               />
               <textarea
                 rows="1"
                 placeholder="请输入您很棒的想法..."
-                className="mt-8 py-3 px-6 lg:px-8 w-full h-[150px] sm:h-[200px] lg:h-[300px] border border-[#d6d6d6] bg-white text-xl text-black rounded-lg overflow-x-hidden overflow-y-auto whitespace-pre-wrap outline-none outline-transparent outline-offset-2 break-normal transition duration-500 ease-in-out hover:border-pink-500"
+                className="mt-8 py-3 px-6 lg:px-8 w-full h-[150px] sm:h-[200px] lg:h-[300px] border border-[#d6d6d6] bg-white text-xl text-black rounded-lg overflow-x-hidden overflow-y-auto whitespace-pre-wrap outline-none outline-transparent outline-offset-2 break-normal transition duration-500 ease-in-out transform-gpu hover:border-pink-500"
               ></textarea>
 
               <button

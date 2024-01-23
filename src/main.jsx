@@ -56,14 +56,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <ScrollToTop>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/project" element={<Project />}></Route>
-          <Route path="/article" element={<Article />}></Route>
-          <Route path="/awards" element={<Awards />}></Route>
-          <Route path="/digital" element={<DigitalDistribution />}></Route>
-          <Route path="/photos" element={<Photos />}></Route>
-          <Route path="/collection" element={<DigitalCollection />}></Route>
-          <Route path="/contact" element={<ContactMe />}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/article" element={<Article />} />
+          <Route path="/awards" element={<Awards />} />
+          <Route path="/digital" element={<DigitalDistribution />} />
+          <Route path="/photos" element={<Photos />} />
+          <Route path="/collection" element={<DigitalCollection />} />
+          <Route path="/contact" element={<ContactMe />} />
         </Route>
       </Routes>
     </ScrollToTop>

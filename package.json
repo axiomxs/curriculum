@@ -12,6 +12,7 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.24",
     "@headlessui/react": "^1.7.17",
+    "ahooks": "^3.7.8",
     "axios": "^1.6.0",
     "bricklayer": "^0.4.3",
     "css-module": "^1.1.4",
