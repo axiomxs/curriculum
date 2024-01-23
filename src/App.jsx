@@ -1,11 +1,11 @@
 {
-  /*导入React */
+  /*导入React、useState*/
 }
 import { React, useState } from "react";
 {
-  /*导入Outlet组件插槽 */
+  /*导入Outlet组件插槽、Link组件 */
 }
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 {
   /*导入底部信息组件 */
 }
@@ -74,14 +74,18 @@ export const App = () => {
           </div>
           {/*居中 当低于md，选项栏靠左*/}
           <div className="hidden sm:hidden lg:flex gap-x-12 text-black">
-            <a href="/#">主页</a>
-            <a href="/#/project">项目</a>
-            <a href="/#/article">文章</a>
-            <a href="/#/awards">奖项</a>
-            <a href="/#/digital">数字出版</a>
-            <a href="/#/photos">照片展示</a>
-            <a href="/#/collection">数字藏品</a>
-            <a href="/#/contact">联系我</a>
+            {/*
+              为了在SPA单页面应用中实现无刷新的页面导航，
+              使用a标签会完整刷新页面，而link则只加载路由 
+            */}
+            <Link to="/">主页</Link>
+            <Link to="/project">项目</Link>
+            <Link to="/article">文章</Link>
+            <Link to="/awards">奖项</Link>
+            <Link to="/digital">数字出版</Link>
+            <Link to="/photos">照片展示</Link>
+            <Link to="/collection">数字藏品</Link>
+            <Link to="/contact">联系我</Link>
           </div>
           <div className="block sm:block lg:hidden absolute top-0 right-0">
             <motion.div
@@ -99,6 +103,7 @@ export const App = () => {
           </div>
         </div>
       </div>
+
       {/*子路由组件插槽 */}
       <Outlet />
       <Bottom />

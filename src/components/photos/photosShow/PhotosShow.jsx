@@ -82,6 +82,7 @@ export const PhotosShow = () => {
       className="box-border w-full h-fit px-20 bg-transparent overflow-hidden"
     >
       {/*使用map遍历，并通过对id的奇偶区分，分别设置样式，实现【图片 + 文字】块棋格布局 */}
+      {/*LazyLoad 实现懒加载 */}
       {datas.map((item) => (
         <LazyLoad height={605} key={item.id}>
           <div
