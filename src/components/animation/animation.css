@@ -1,0 +1,27 @@
+@keyframes grow {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+.animate-grow {
+  animation: grow 1s ease-out forwards;
+}
+
+.animate-move-left {
+  animation: move-left 1s ease-in-out forwards;
+}

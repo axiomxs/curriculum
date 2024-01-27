@@ -1,5 +1,5 @@
 {
-  /*顶部文字条组件 */
+  /*联系我组件 */
 }
 {
   /*导入 React、useState、useEffect */
@@ -124,13 +124,13 @@ export const ContactMe = () => {
                 Let’s talk!
               </span>
             </div>
-            <div className="my-20 pl-8 border-l-2 lg:border-l-4 border-[#a43eee] ">
-              <span className=" text-xl lg:text-2xl text-black text-center tracking-wider leading-9 text-wrap">
+            <div className="my-20 pl-8 border-l-2 lg:border-l-4 border-[#a43eee] leading-9 transition-all duration-500 ease-in-out transform-gpu hover:leading-10">
+              <span className=" text-xl lg:text-2xl text-black text-center tracking-wider text-wrap">
                 如果你有很棒的想法或需要平面设计，网站，移动应用程序…
                 <br />
                 请在这里填写，
                 <br />
-                或者发送到我的邮箱
+                或发送到我的邮箱
                 <a
                   href="mailto:465331615@qq.com"
                   className="mx-2 text-[#a43eee]"

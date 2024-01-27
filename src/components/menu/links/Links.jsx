@@ -105,22 +105,6 @@ export const Links = () => {
         项目
       </MotionLink>
       <MotionLink
-        to="/article"
-        variants={itemVariants}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        文章
-      </MotionLink>
-      <MotionLink
-        to="/awards"
-        variants={itemVariants}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        奖项
-      </MotionLink>
-      <MotionLink
         to="/digital"
         variants={itemVariants}
         whileHover={{ scale: 1.1 }}
@@ -135,14 +119,6 @@ export const Links = () => {
         whileTap={{ scale: 0.95 }}
       >
         照片展示
-      </MotionLink>
-      <MotionLink
-        to="/collection"
-        variants={itemVariants}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        数字藏品
       </MotionLink>
       <MotionLink
         to="/contact"

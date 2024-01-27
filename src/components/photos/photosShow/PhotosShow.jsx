@@ -120,7 +120,7 @@ export const PhotosShow = () => {
           >
             <p className="text-black text-base lg:text-xl">{item.author}</p>
             <div className="my-8 lg:my-14 leading-10">
-              <span className="bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out transform-gputext-black text-wrap text-4xl lg:text-5xl hover:bg-[length:100%_30%]">
+              <span className="bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out transform-gputext-black text-black text-wrap text-4xl lg:text-5xl hover:bg-[length:100%_30%]">
                 {item.title}
               </span>
             </div>

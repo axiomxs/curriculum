@@ -70,7 +70,9 @@ export const App = () => {
         <div className="flex justify-between items-center w-4/5 h-14 container mx-auto text-center">
           {/*logo */}
           <div className="w-auto h-full">
-            <img src={logo} className="h-full" alt="LingJue" />
+            <Link to="/">
+              <img src={logo} className="h-full" alt="LingJue" />
+            </Link>
           </div>
           {/*居中 当低于md，选项栏靠左*/}
           <div className="hidden sm:hidden lg:flex gap-x-12 text-black">
@@ -80,11 +82,8 @@ export const App = () => {
             */}
             <Link to="/">主页</Link>
             <Link to="/project">项目</Link>
-            <Link to="/article">文章</Link>
-            <Link to="/awards">奖项</Link>
             <Link to="/digital">数字出版</Link>
             <Link to="/photos">照片展示</Link>
-            <Link to="/collection">数字藏品</Link>
             <Link to="/contact">联系我</Link>
           </div>
           <div className="block sm:block lg:hidden absolute top-0 right-0">
