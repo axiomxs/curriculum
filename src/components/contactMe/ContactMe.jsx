@@ -124,8 +124,8 @@ export const ContactMe = () => {
                 Let’s talk!
               </span>
             </div>
-            <div className="my-20 pl-8 border-l-2 lg:border-l-4 border-[#a43eee] leading-9 transition-all duration-500 ease-in-out transform-gpu hover:leading-10">
-              <span className=" text-xl lg:text-2xl text-black text-center tracking-wider text-wrap">
+            <div className="my-20 pl-8 border-l-2 lg:border-l-4 border-[#a43eee] leading-9 transition-all duration-500 ease-in-out transform-gpu hover:leading-10 ">
+              <span className="p-1 rounded-xl text-xl lg:text-2xl text-black text-center tracking-wider text-wrap transition-all duration-500 ease-in-out transform-gpu hover:text-orange-400 hover:bg-yellow-400/20 ">
                 如果你有很棒的想法或需要平面设计，网站，移动应用程序…
                 <br />
                 请在这里填写，

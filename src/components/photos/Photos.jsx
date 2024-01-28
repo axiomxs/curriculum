@@ -8,7 +8,7 @@ import React from "react";
 {
   /*导入照片主页组件 */
 }
-import { PhotosHome } from "./photosHome/PhotosHome.jsx";
+import { PhotosHome } from "./photosHome/PhotosHome.tsx";
 {
   /*导入照片展示组件 */
 }
