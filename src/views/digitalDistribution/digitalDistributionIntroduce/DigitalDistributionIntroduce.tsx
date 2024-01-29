@@ -6,6 +6,10 @@
 }
 import React from "react";
 {
+  /*导入 Link 组件 */
+}
+import { Link } from "react-router-dom";
+{
   /*导入懒加载 */
 }
 import LazyLoad from "react-lazyload";
@@ -15,65 +19,52 @@ import LazyLoad from "react-lazyload";
 import datas from "./digitalSelection.json";
 
 {
-  /*定义 SelectionItem 接口以增强类型安全性 */
+  /*（接口）定义 SelectionItem 接口以增强类型安全性 */
 }
 interface SelectionItem {
   id: string | number;
   img: string;
   author: string;
   title: string;
-  introduce: string;
+  show: string;
 }
 
-export const DigitalDistributionIntroduc: React.FC = () => {
+export const DigitalDistributionIntroduce: React.FC = () => {
   return (
-    <div className="w-full h-fit py-16 px-8 lg:px-14 overflow-hidden">
-      <div className="w-fit bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out transform-gpu text-black text-wrap text-4xl lg:text-5xl hover:bg-[length:100%_30%]">
+    <div className="w-full h-fit py-16 px-8 sm:px-10 md:px-10 lg:px-8 xl:px-20 overflow-hidden">
+      <div className="w-fit bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out transform-gpu text-black text-wrap text-4xl sm:text-5xl lg:text-7xl font-bold tracking-wider hover:bg-[length:100%_30%]">
         内容<span className="text-[#e30000]">精选</span>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 w-full h-full lg:px-4 pt-20 sm:gap-4 md:gap-6 lg:gap-7">
         {datas.map((item: SelectionItem) => (
-          <div
-            className="flex mb-6 lg:mb-0 flex-col lg:flex-row w-full h-full rounded-3xl transition-all duration-500 ease-in-out transform-gpu hover:scale-95"
-            key={item.id}
-          >
-            {/*
+          <Link to={item.show} key={item.id}>
+            <div className="flex flex-col w-full h-[320px] sm:h-[320px] md:h-[380px] lg:h-[400px] xl:h-[400px] mb-12 rounded-2xl overflow-hidden shadow-lg md:shadow-none shadow-true-gray-200 transition-all duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl">
+              {/*
             LazyLoad 实现懒加载，根据滚动位置动态调整 LazyLoad 高度阈值
             设置了垂直偏移量，使其在接近视口顶部时提前开始加载 
           */}
-            <LazyLoad
-              className="w-full lg:w-2/5 h-full overflow-hidden rounded-t-3xl lg:rounded-l-3xl lg:rounded-r-none"
-              height={(window.innerHeight as number) * 1.2}
-              offset={[-100, 0]}
-            >
-              <div className="w-full lg:h-full">
+              <LazyLoad
+                className="w-full h-full rounded-2xl"
+                height={(window.innerHeight as number) * 1.2}
+                offset={[-100, 0]}
+              >
                 <img
                   src={item.img}
-                  className="w-full h-full object-cover  rounded-t-3xl lg:rounded-l-3xl lg:rounded-r-none"
+                  className="w-full h-full rounded-2xl object-cover"
                 />
-              </div>
-            </LazyLoad>
-            <div className="flex flex-col lg:justify-center items-center sm:items-center lg:items-start w-full lg:w-3/5 h-full py-12 lg:py-12 px-12 bg-[#fafafc]  rounded-b-3xl lg:rounded-r-3xl lg:rounded-l-none">
-              <p className="text-black text-base">{item.author}</p>
-              <div className="my-8 lg:my-14 leading-10">
-                <span className="bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out transform-gpu text-black text-wrap text-xl lg:text-4xl hover:bg-[length:100%_30%]">
-                  {item.title}
-                </span>
-              </div>
-
-              <p className="block lg:hidden text-black text-base text-center lg:text-left">
-                {item.introduce}
-              </p>
-              <div className="flex gap-2.5 mt-8 lg:mt-14">
-                <p className="text-black p-1 rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
-                  摄影
-                </p>
-                <p className="text-black p-1 rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
-                  旅拍
-                </p>
+              </LazyLoad>
+              <div className="absolute letf-[5%] top-[55%] sm:top-[50%] w-full">
+                <div className="w-full h-fit p-4">
+                  <p className="py-1 line-clamp-2 text-2xl text-white leading-tight tracking-wider md:leading-tight font-bold">
+                    {item.title}
+                  </p>
+                  <p className="py-1 line-clamp-2 text-base text-white leading-tight tracking-wider md:leading-tight">
+                    {item.author}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

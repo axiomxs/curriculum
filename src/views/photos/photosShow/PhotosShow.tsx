@@ -19,7 +19,7 @@ import LazyLoad from "react-lazyload";
 import datas from "./photosShow.json";
 
 {
-  /*定义 PhotoItem 接口以增强类型安全性 */
+  /*（接口）定义 PhotoItem 接口以增强类型安全性 */
 }
 interface PhotoItem {
   id: number;
@@ -31,15 +31,39 @@ interface PhotoItem {
 
 export const PhotosShow = () => {
   {
-    /*使用useState Hook初始化状态变量scrollDistance，用于记录滚动距离 */
+    /*（滚动）使用useState Hook初始化状态变量scrollDistance，用于记录滚动距离 */
   }
   const [scrollDistance, setScrollDistance] = useState<number>(0);
   {
-    /*创建控制图片展示区域显示与隐藏的状态 */
+    /*（滚动）创建控制图片展示区域显示与隐藏的状态 */
   }
   const [visible, setVisible] = useState<boolean>(false);
   {
-    /*滚动事件监听与控制展示页面开关 */
+    /*（判断动画）初始化屏幕宽度状态为-1 */
+  }
+  const [screenWidth, setScreenWidth] = useState(-1);
+
+  {
+    /*（判断动画）窗口尺寸变化监听 */
+  }
+  useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    {
+      /*添加窗口尺寸变化监听事件 */
+    }
+    window.addEventListener("resize", handleResize);
+    {
+      /*执行一次以获取当前屏幕宽度 */
+    }
+    handleResize();
+    {
+      /*在组件卸载时移除事件监听器 */
+    }
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  {
+    /*（滚动）滚动事件监听与控制展示页面开关 */
   }
   useEffect(() => {
     function handleScroll(event: Event) {
@@ -48,12 +72,10 @@ export const PhotosShow = () => {
       }
       const currentScrollY =
         window.pageYOffset || document.documentElement.scrollTop;
-
       {
         /*设置滚动位置并判断是否达到显示阈值*/
       }
       setScrollDistance(currentScrollY);
-
       {
         /*当滚动到屏幕高度的10%时，显示图片展示区域*/
       }
@@ -63,9 +85,7 @@ export const PhotosShow = () => {
         setVisible(false);
       }
     }
-
     window.addEventListener("scroll", handleScroll, { passive: true });
-
     {
       /*在组件卸载时移除滚动事件监听器*/
     }
@@ -73,10 +93,14 @@ export const PhotosShow = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollDistance]);
+
   {
-    /*图片展示盒子出现在页面时的渐入动画 */
+    /*（动画）图片展示盒子出现在页面时的渐入动画 */
   }
-  const states = {
+  {
+    /*电脑屏幕下的动画 */
+  }
+  const lgstates = {
     visible: {
       y: -130,
 
@@ -94,11 +118,33 @@ export const PhotosShow = () => {
       },
     },
   };
+  {
+    /*手机、平板屏幕下的动画 */
+  }
+  const states = {
+    visible: {
+      y: -320,
+
+      transition: {
+        type: "tween",
+        duration: 1,
+      },
+    },
+    hidden: {
+      y: -50,
+
+      transition: {
+        type: "tween",
+        duration: 1,
+      },
+    },
+  };
+
   return (
     <motion.div
-      variants={states}
+      variants={screenWidth >= 1024 ? lgstates : states}
       animate={visible ? "visible" : "hidden"}
-      className="box-border w-full h-fit px-20 bg-transparent overflow-hidden"
+      className="box-border w-full h-fit px-6 sm:px-10 md:px-20 lg:px-20 bg-transparent overflow-hidden"
     >
       {/*使用map遍历，并通过对id的奇偶区分，分别设置样式，实现【图片 + 文字】块棋格布局 */}
       {datas.map((item: PhotoItem) => (
@@ -129,21 +175,21 @@ export const PhotosShow = () => {
               item.id % 2 === 0 ? "lg:items-end" : "lg:items-start"
             }`}
           >
-            <p className="text-black text-base lg:text-xl">{item.author}</p>
+            <p className="text-black text-base lg:text-md font-bold ">{item.author}</p>
             <div className="my-8 lg:my-14 leading-10">
-              <span className="bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out transform-gputext-black text-black text-wrap text-4xl lg:text-5xl hover:bg-[length:100%_30%]">
+              <span className="bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out transform-gputext-black text-black text-wrap text-4xl lg:text-5xl font-black hover:bg-[length:100%_30%]">
                 {item.title}
               </span>
             </div>
 
-            <p className="text-black text-base text-center lg:text-left">
+            <p className="text-black text-base tracking-widest text-center lg:text-left">
               {item.introduce}
             </p>
             <div className="flex gap-2.5 mt-8 lg:mt-14">
-              <p className="text-black p-1 rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
+              <p className="p-1 text-black tracking-wider rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
                 摄影
               </p>
-              <p className="text-black p-1 rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
+              <p className="p-1 text-black tracking-wider rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
                 旅拍
               </p>
             </div>

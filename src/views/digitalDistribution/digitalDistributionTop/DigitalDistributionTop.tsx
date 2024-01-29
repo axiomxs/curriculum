@@ -29,29 +29,29 @@ export const DigitalDistributionTop = () => {
     h: 900,
   };
   return (
-    <div className="box-border w-full h-fit px-14 pt-6 pb-14 bg-white overflow-hidden">
+    <div className="box-border w-full h-fit px-8 sm:px-10 md:px-10 lg:px-8 xl:px-20 pt-6 pb-14 bg-white overflow-hidden">
       <div className="relative">
         <div className="absolute inset-0 z-0">
           {/*将 光晕 组件的宽高传入 */}
           <HaloAnimation size={size} />
         </div>
         <div className="relative z-10 flex flex-col justify-center items-center">
-          <div className="pt-22 py-16 text-black text-5xl sm:text-8xl lg:text-9xl">
+          <div className="pt-22 py-16 text-black text-5xl sm:text-8xl lg:text-9xl font-black tracking-wider">
             数字出版
             <div className="flex justify-center gap-2.5 mt-4 lg:mt-10">
-              <p className="p-1 rounded-xl text-xl text-black hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
+              <p className="p-1 rounded-xl text-xl text-black tracking-wider hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
                 见闻
               </p>
-              <p className="p-1 rounded-xl text-xl text-black hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
+              <p className="p-1 rounded-xl text-xl text-black tracking-wider hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
                 项目集
               </p>
-              <p className="p-1 rounded-xl text-xl text-black hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
+              <p className="p-1 rounded-xl text-xl text-black tracking-wider hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
                 技术
               </p>
-              <p className="p-1 rounded-xl text-xl text-black hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
+              <p className="p-1 rounded-xl text-xl text-black tracking-wider hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
                 文学与艺术
               </p>
-              <p className="p-1 rounded-xl text-xl text-black hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
+              <p className="p-1 rounded-xl text-xl text-black tracking-wider hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
                 影像记录
               </p>
             </div>
@@ -65,7 +65,7 @@ export const DigitalDistributionTop = () => {
             src="https://telegraph-image-6cq.pages.dev/file/53441eccfcdb414345456.jpg"
             className="rounded-3xl transition-all duration-500 ease-in-out transform-gpu hover:scale-105"
           />
-          <p className="absolute bottom-[21%] left-[10%] text-white text-3xl">
+          <p className="absolute bottom-[21%] left-[10%] text-white text-3xl font-bold">
             Top books of 2024
           </p>
         </div>
@@ -74,7 +74,7 @@ export const DigitalDistributionTop = () => {
             src="https://telegraph-image-6cq.pages.dev/file/1734a47997351394c9494.jpg"
             className="rounded-3xl transition-all duration-500 ease-in-out transform-gpu hover:scale-105"
           />
-          <p className="absolute bottom-[21%] left-[10%] text-white text-3xl">
+          <p className="absolute bottom-[21%] left-[10%] text-white text-3xl font-bold">
             Top books of 2024
           </p>
         </div>
@@ -83,7 +83,7 @@ export const DigitalDistributionTop = () => {
             src="https://telegraph-image-6cq.pages.dev/file/9368c68a511c84f1f9713.jpg"
             className="rounded-3xl transition-all duration-500 ease-in-out transform-gpu hover:scale-105"
           />
-          <p className="absolute bottom-[21%] left-[10%] text-white text-3xl">
+          <p className="absolute bottom-[21%] left-[10%] text-white text-3xl font-bold">
             Top books of 2024
           </p>
         </div>

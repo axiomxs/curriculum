@@ -76,7 +76,7 @@ export const DigitalDistributionMiddle: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center py-20 px-8  bg-white">
+    <div className="flex justify-center py-20 px-8 sm:px-10 md:px-10 lg:px-8 xl:px-20 bg-white">
       <div className="flex flex-col items-center max-w-[1200px] py-6 px-6 border border-[#e3e8f7] bg-white rounded-xl leading-6 transition-all duration-300 ease-in-out hover:border-rose-400 shadow-[0_8px_16px_-4px_rgba(102, 68, 68, 0.00)]">
         <span className="flex flex-col text-xl sm:text-xl lg:text-2xl tracking-widest py-2">
           <p

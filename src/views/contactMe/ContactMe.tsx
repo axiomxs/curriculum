@@ -11,7 +11,7 @@ import React, { useState, useEffect } from "react";
 import contact from "../../assets/icon/contact.svg";
 
 {
-  /*定义 ContactForm 和 Refs 接口以增强类型安全性 */
+  /*（接口）定义 ContactForm 和 Refs 接口以增强类型安全性 */
 }
 interface ContactForm {
   name: string;
@@ -29,11 +29,11 @@ export const ContactMe: React.FC = () => {
     /* 图片视差效果 */
   }
   {
-    /*使用useState Hook初始化状态变量scrollDistance，用于记录滚动距离 */
+    /*（视差）使用useState Hook初始化状态变量scrollDistance，用于记录滚动距离 */
   }
   const [scrollDistance, setScrollDistance] = useState(0);
   {
-    /*使用useRef Hook创建两个引用对象，分别用于获取header和img的DOM元素 */
+    /*（视差）使用useRef Hook创建两个引用对象，分别用于获取header和img的DOM元素 */
   }
   const refs: Refs = {
     headerRef: React.useRef<HTMLDivElement>(null),
@@ -41,6 +41,7 @@ export const ContactMe: React.FC = () => {
   };
   {
     /*
+    （视差）
     滚动事件监听与视差效果
     使用 useThrottleEffect 进行节流处理
     */
@@ -129,9 +130,9 @@ export const ContactMe: React.FC = () => {
                 Let’s talk!
               </span>
             </div>
-            <div className="my-20 pl-8 border-l-2 lg:border-l-4 border-[#a43eee] leading-9 transition-all duration-500 ease-in-out transform-gpu hover:leading-10 ">
+            <div className="mt-14 lg:mt-20 mb-20 pl-8 border-l-2 lg:border-l-4 border-[#a43eee] leading-9 transition-all duration-500 ease-in-out transform-gpu hover:leading-10 ">
               <span className="p-1 rounded-xl text-xl lg:text-2xl text-black text-center tracking-wider text-wrap transition-all duration-500 ease-in-out transform-gpu hover:text-orange-400 hover:bg-yellow-400/20 ">
-                如果你有很棒的想法或需要平面设计，网站，移动应用程序…
+                如果你有很棒的想法或需要平面设计，网站，应用程序…
                 <br />
                 请在这里填写，
                 <br />
@@ -164,12 +165,12 @@ export const ContactMe: React.FC = () => {
               <textarea
                 rows={1}
                 placeholder="请输入您很棒的想法..."
-                className="mt-8 py-3 px-6 lg:px-8 w-full h-[150px] sm:h-[200px] lg:h-[300px] border border-[#d6d6d6] bg-white text-xl text-black rounded-lg overflow-x-hidden overflow-y-auto whitespace-pre-wrap outline-none outline-transparent outline-offset-2 break-normal transition duration-500 ease-in-out transform-gpu hover:border-pink-500"
+                className="mt-8 py-8 px-6 lg:px-8 w-full h-[150px] sm:h-[200px] lg:h-[300px] border border-[#d6d6d6] bg-white text-xl text-black rounded-lg overflow-x-hidden overflow-y-auto whitespace-pre-wrap outline-none outline-transparent outline-offset-2 break-normal transition duration-500 ease-in-out transform-gpu hover:border-pink-500"
                 id="think"
               ></textarea>
 
               <button
-                className="mt-8 mb-10 py-2.5 px-7 w-28 h-12 border border-[#d6d6d6] bg-transparent text-xl text-black rounded-[100px] cursor-pointer"
+                className="mt-8 mb-10 px-7 w-28 h-12 border border-[#d6d6d6] bg-transparent text-xl text-black rounded-[100px] cursor-pointer"
                 onClick={handleButtonClick}
               >
                 提交
