@@ -88,7 +88,7 @@ const Article = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="w-full h-fit mb-10 overflow-hidden">
+    <div className="w-full h-fit bg-white mb-10 overflow-hidden">
       <div
         className="project-gradient absolute top-0 left-0 right-0 h-[60vh] bg-no-repeat bg-center bg-scroll bg-cover z-10"
         style={{ backgroundImage: `url('${data[0].img}')` }}
@@ -118,8 +118,8 @@ const Article = () => {
       </div>
       <div className="divider pt-8 px-14"></div>
       <div className="mt-10 px-4 sm:px-20 md:px-40 lg:px-80">
-        <div className="p-5 text-xl text-black leading-relaxed tracking-wider">
-          <div dangerouslySetInnerHTML={htmlobj} />
+        <div className="p-5 text-xl text-black break-all leading-relaxed tracking-wider">
+          <div dangerouslySetInnerHTML={htmlobj} className="" />
         </div>
       </div>
     </div>
