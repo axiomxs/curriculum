@@ -14,18 +14,22 @@ const Bottom = () => {
   return (
     <div className="box-border max-w-[1400px] h-fit px-20 pb-14 bg-white overflow-hidden ">
       <div className="flex justify-between items-center flex-wrap w-full border-t-[1px] border-gray-300">
-        <div className="flex flex-col pt-24 ">
+        <div className="flex flex-col pt-10 md:pt-24 ">
           <span className="p-1 text-2xl text-black font-bold rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out">
             离颜 灵绝
           </span>
           <span className="p-1 whitespace-nowrap text-black  rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out">
             命运指引，一切皆为必然轨迹。
           </span>
-          <a href="https://notbyai.fyi" target="_blank" className="px-2 pt-3">
+          <a
+            href="https://notbyai.fyi"
+            target="_blank"
+            className="hidden md:block px-2 pt-3"
+          >
             <img src={notAI} />
           </a>
         </div>
-        <div className="flex h-full text-center text-xl text-black ">
+        <div className="hidden md:block flex h-full text-center text-xl text-black ">
           <span className="p-1 font-bold whitespace-nowrap rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out">
             灵绝
           </span>
