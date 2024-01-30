@@ -67,7 +67,7 @@ const App: React.FC = () => {
 
   return (
     <div className="relative box-border bg-[#f6f6f6]">
-      <div className="sticky top-0 bottom-auto right-auto left-auto w-auto h-14 px-14 bg-[#f6f6f6]/60 backdrop-blur-md z-50">
+      <div className="sticky top-0 bottom-auto right-auto left-auto w-auto h-14 px-0 sm:px-8 md:px-14 bg-[#f6f6f6]/60 backdrop-blur-md z-50">
         {/*固定定位、100%宽度背景模糊、高层显示*/}
         <div className="flex justify-between items-center w-4/5 h-14 container mx-auto text-center">
           {/*logo */}
@@ -82,8 +82,7 @@ const App: React.FC = () => {
               为了在SPA单页面应用中实现无刷新的页面导航，
               使用a标签会完整刷新页面，而link则只加载路由 
             */}
-            <Link to="/">主页</Link>
-            <Link to="/project">项目</Link>
+            <Link to="/">主页 & 项目</Link>
             <Link to="/digital">数字出版</Link>
             <Link to="/photos">照片展示</Link>
             <Link to="/contact">联系我</Link>

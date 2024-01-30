@@ -18,10 +18,6 @@ import { Route, Routes } from "react-router-dom";
 }
 import App from "../App";
 {
-  /*导入 主页 组件*/
-}
-import Home from "../views/home/Home";
-{
   /*导入 项目（年度项目 + 普通项目）组件*/
 }
 import Project from "../views/project/Project";
@@ -38,6 +34,10 @@ import Photos from "../views/photos/Photos";
 }
 import ContactMe from "../views/contactMe/ContactMe";
 {
+  /*导入 文章 组件*/
+}
+import Article from "../views/article/Article";
+{
   /*导入 NotFound 组件*/
 }
 import Notfound from "../views/notFound/Notfound";
@@ -46,11 +46,11 @@ const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<App />}>
-        <Route index element={<Home />} />
-        <Route path="/project" element={<Project />} />
+        <Route path="/" element={<Project />} />
         <Route path="/digital" element={<DigitalDistribution />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/contact" element={<ContactMe />} />
+        <Route path="/diary/:address" element={<Article />}></Route>
       </Route>
       <Route path="*" element={<Notfound />} />
     </Routes>

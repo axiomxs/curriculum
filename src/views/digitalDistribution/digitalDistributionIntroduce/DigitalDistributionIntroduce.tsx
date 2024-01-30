@@ -22,11 +22,15 @@ import datas from "./digitalSelection.json";
   /*（接口）定义 SelectionItem 接口以增强类型安全性 */
 }
 interface SelectionItem {
-  id: string | number;
+  id: number;
+  address: string;
   img: string;
-  author: string;
   title: string;
-  show: string;
+  author: string;
+  sort?: string;
+  date?: string;
+  abstract?: string;
+  content?: string;
 }
 
 export const DigitalDistributionIntroduce: React.FC = () => {
@@ -37,7 +41,7 @@ export const DigitalDistributionIntroduce: React.FC = () => {
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full h-full pt-20 gap-4 sm:gap-4 md:gap-6 lg:gap-7">
         {datas.map((item: SelectionItem) => (
-          <Link to={item.show} key={item.id}>
+          <Link to={`/diary/${item.address}`} key={item.id}>
             <div className="flex flex-col w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-lg md:shadow-none shadow-true-gray-200 transition-all duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl">
               {/*
             LazyLoad 实现懒加载，根据滚动位置动态调整 LazyLoad 高度阈值
