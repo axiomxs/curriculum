@@ -48,10 +48,10 @@ export const DigitalDistributionShow: React.FC = () => {
           </span>
           <img src={right} className="-pt-3 lg:pt-3" />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full h-full lg:px-4 pt-20 sm:gap-4 md:gap-6 xl:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full h-full pt-20 gap-4 sm:gap-4 md:gap-6 xl:gap-8">
           {datas.map((item: DigitalItem) => (
             <Link to={item.show} key={item.id}>
-              <div className="group flex flex-col w-full sm:h-[360px] md:h-[380px] lg:h-[340px] xl:h-[390px] mb-12 rounded-2xl overflow-hidden shadow-lg md:shadow-none shadow-true-gray-200 transition-all duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl">
+              <div className="group flex flex-col w-full sm:aspect-[2/3] rounded-2xl overflow-hidden shadow-lg md:shadow-none shadow-true-gray-200 transition-all duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl">
                 {/*
                 LazyLoad 实现懒加载，根据滚动位置动态调整 LazyLoad 高度阈值
                 设置了垂直偏移量，使其在接近视口顶部时提前开始加载 
@@ -63,7 +63,7 @@ export const DigitalDistributionShow: React.FC = () => {
                 >
                   <img
                     src={item.img}
-                    className="w-full h-[440px] rounded-3xl object-cover transition-all duration-500 ease-in-out transform-gpu scale-125 group-hover:-rotate-[6deg]"
+                    className="w-full aspect-[2/3] rounded-3xl object-cover transition-all duration-500 ease-in-out transform-gpu scale-125 group-hover:-rotate-[6deg]"
                   />
                 </LazyLoad>
                 <div className="absolute right-0 bottom-0 lg:-bottom-56 transition-all duration-500 ease-in-out transform-gpu group-hover:bottom-0 left-0">

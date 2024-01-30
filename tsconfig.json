@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "outDir": "./build/",
     "target": "es5",
     "lib": ["es6", "dom"],
     "sourceMap": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "isolatedModules": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "resolveJsonModule": true

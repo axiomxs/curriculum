@@ -2,16 +2,34 @@
   /*项目展示组件 */
 }
 {
-  /*导入 React、Link、motion动画 */
+  /*导入 React */
 }
 import React from "react";
+{
+  /*导入 Link 组件 */
+}
 import { Link } from "react-router-dom";
+{
+  /*导入 motion动画 */
+}
 import { motion } from "framer-motion";
 {
   /*从本地获取json数据 */
 }
 import datas from "./appshow.json";
-export const AppShow = () => {
+
+{
+  /*定义 ProjectShowItem 接口以增强类型安全性 */
+}
+interface ProjectShowItem {
+  id: number;
+  img: string;
+  show: string;
+  title: string;
+  introduce: string;
+}
+
+export const AppShow: React.FC = () => {
   {
     /*文字出现在页面时的渐入动画 */
   }
@@ -36,17 +54,17 @@ export const AppShow = () => {
         variants={states}
         whileInView="visible"
         initial="hidden"
-        className="w-full container mx-auto pt-24 px-4 sm:px-14"
+        className="w-full pt-14 px-8 sm:px-10 md:px-10 lg:px-8 xl:px-20"
       >
-        <span className="pt-16 text-2xl sm:text-3xl lg:text-5xl font-bold text-[#e30000]">
+        <span className="pt-16 text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl leading-normal  font-bold text-[#e30000]">
           项目，
         </span>
-        <span className="text-2xl sm:text-3xl lg:text-5xl text-[#6e6e73]">
+        <span className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl leading-normal  text-[#6e6e73]">
           用心和创意构建项目、构建体验！
         </span>
         <div className="carousel carousel-center w-full h-full px-4 pb-14 pt-14 space-x-6 rounded-box">
           <div className="relative flex flex-col carousel-item w-[260px] h-[454px]  sm:h-[505px] sm:w-[404px] p-8 rounded-2xl bg-[#f56900]/90 overflow-hidden shadow-xl cursor-pointer scale-100 transition duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl shadow-[2px_4px_16px_rgba(0, 0, 0, 0.16)]">
-            <span className="pt-10 text-white text-2xl sm:text-3xl">
+            <span className="pt-10 text-white text-3xl sm:text-4xl">
               科技赋能，为产品带来灵魂。
             </span>
             <img
@@ -55,7 +73,7 @@ export const AppShow = () => {
               className="-mt-6"
             />
           </div>
-          {datas.map((item) => (
+          {datas.map((item: ProjectShowItem) => (
             <Link
               to={item.show}
               className="relative flex flex-col group carousel-item h-[454px] w-[260px] sm:h-[500px] sm:w-[313px] p-8 rounded-2xl bg-[#fff] overflow-hidden shadow-xl cursor-pointer scale-100 transition duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl"

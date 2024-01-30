@@ -1,5 +1,5 @@
 {
-  /*数字发行物组件 -  精选内容组件*/
+  /*项目展示 - 项目主页组件 */
 }
 {
   /*导入React */
@@ -16,12 +16,12 @@ import LazyLoad from "react-lazyload";
 {
   /*导入图片展示数据 */
 }
-import datas from "./digitalSelection.json";
+import datas from "./projectMiddle.json";
 
 {
-  /*（接口）定义 SelectionItem 接口以增强类型安全性 */
+  /*（接口）定义 ProjectMiddleItem 接口以增强类型安全性 */
 }
-interface SelectionItem {
+interface ProjectMiddleItem {
   id: string | number;
   img: string;
   author: string;
@@ -29,16 +29,13 @@ interface SelectionItem {
   show: string;
 }
 
-export const DigitalDistributionIntroduce: React.FC = () => {
+export const ProjectMiddle: React.FC = () => {
   return (
-    <div className="w-full h-fit py-16 px-8 sm:px-10 md:px-10 lg:px-8 xl:px-20 overflow-hidden">
-      <div className="w-fit bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out transform-gpu text-black text-wrap text-4xl sm:text-5xl lg:text-7xl font-bold tracking-wider hover:bg-[length:100%_30%]">
-        内容<span className="text-[#e30000]">精选</span>
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full h-full pt-20 gap-4 sm:gap-4 md:gap-6 lg:gap-7">
-        {datas.map((item: SelectionItem) => (
+    <div className="w-full h-fit px-8 sm:px-10 md:px-10 lg:px-8 xl:px-20 pb-10 overflow-hidden">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full h-full pt-10 sm:pt-14 md:pt-20 gap-4 sm:gap-4 md:gap-6 lg:gap-7">
+        {datas.map((item: ProjectMiddleItem) => (
           <Link to={item.show} key={item.id}>
-            <div className="flex flex-col w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-lg md:shadow-none shadow-true-gray-200 transition-all duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-2xl">
+            <div className="flex flex-col w-full aspect-[2/3] rounded-2xl overflow-hidden shadow-lg md:shadow-none shadow-true-gray-200 transition-all duration-500 ease-in-out transform-gpu hover:scale-[1.02] hover:shadow-xl">
               {/*
             LazyLoad 实现懒加载，根据滚动位置动态调整 LazyLoad 高度阈值
             设置了垂直偏移量，使其在接近视口顶部时提前开始加载 

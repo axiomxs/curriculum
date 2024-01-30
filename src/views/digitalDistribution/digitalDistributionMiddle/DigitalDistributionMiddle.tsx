@@ -68,7 +68,7 @@ export const DigitalDistributionMiddle: React.FC = () => {
     /*根据滚动百分比的不同范围，返回相应的颜色值 */
   }
   const getColorByScrollPercentage = (percentage: number) => {
-    if (percentage < 50) {
+    if (percentage < 45) {
       return "slate-100";
     } else {
       return "black";
