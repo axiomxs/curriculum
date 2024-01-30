@@ -6,6 +6,10 @@
 }
 import React from "react";
 {
+  /*导入 监听渲染完毕 的高阶组件 */
+}
+import withLoading from "../../hoc/withLoading";
+{
   /*导入 项目展示主页 组件 */
 }
 import { ProjectHome } from "./projectHome/ProjectHome";
@@ -36,4 +40,4 @@ const Project: React.FC = () => {
     </div>
   );
 };
-export default Project;
+export default withLoading(Project);

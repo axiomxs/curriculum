@@ -14,9 +14,13 @@ import { useNavigate } from "react-router-dom";
 }
 import { useParams } from "react-router-dom";
 {
+  /*导入 监听渲染完毕 的高阶组件 */
+}
+import withLoading from "../../hoc/withLoading";
+{
   /*导入 图片渐变遮罩CSS  */
 }
-import "../../app.css";
+import "../../styles/app.css";
 {
   /*导入 文章 数据 */
 }
@@ -126,4 +130,4 @@ const Article = () => {
   );
 };
 
-export default Article;
+export default withLoading(Article);

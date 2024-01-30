@@ -6,6 +6,10 @@
 }
 import React, { useState, useEffect } from "react";
 {
+  /*导入 监听渲染完毕 的高阶组件 */
+}
+import withLoading from "../../hoc/withLoading";
+{
   /*导入 contact 图标 */
 }
 import contact from "../../assets/icon/contact.svg";
@@ -183,4 +187,4 @@ const ContactMe: React.FC = () => {
   );
 };
 
-export default ContactMe;
+export default withLoading(ContactMe);

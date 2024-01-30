@@ -29,8 +29,8 @@ import logo from "./assets/img/logo.png";
 {
   /*导入 app.scss全局样式 和 index.css Tailwindcss */
 }
-import "./app.css";
-import "./index.css";
+import "./styles/app.css";
+import "./styles/index.css";
 
 {
   /*遍历生成导航栏 */

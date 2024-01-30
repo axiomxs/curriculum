@@ -6,6 +6,10 @@
 }
 import React from "react";
 {
+  /*导入 监听渲染完毕 的高阶组件 */
+}
+import withLoading from "../../hoc/withLoading";
+{
   /*导入照片主页组件 */
 }
 import { PhotosHome } from "./photosHome/PhotosHome";
@@ -25,4 +29,4 @@ const Photos = () => {
   );
 };
 
-export default Photos;
+export default withLoading(Photos);

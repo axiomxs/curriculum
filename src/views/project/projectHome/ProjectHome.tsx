@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 {
   /*导入 图片渐变遮罩CSS  */
 }
-import "../../../app.css";
+import "../../../styles/app.css";
 
 export const ProjectHome = () => {
   return (

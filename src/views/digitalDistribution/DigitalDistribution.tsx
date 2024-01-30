@@ -6,6 +6,10 @@
 }
 import React from "react";
 {
+  /*导入 监听渲染完毕 的高阶组件 */
+}
+import withLoading from "../../hoc/withLoading";
+{
   /*导入 数字发行物头部 组件 */
 }
 import { DigitalDistributionTop } from "./digitalDistributionTop/DigitalDistributionTop";
@@ -37,4 +41,4 @@ const DigitalDistribution: React.FC = () => {
   );
 };
 
-export default DigitalDistribution;
+export default withLoading(DigitalDistribution);
