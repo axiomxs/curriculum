@@ -30,7 +30,7 @@ interface MotionLinkProps {
   [propName: string]: any;
 }
 
-export const Links = () => {
+const Links = () => {
   {
     /*使用useNavigate Hook获取导航函数 */
   }
@@ -148,3 +148,5 @@ export const Links = () => {
     </motion.div>
   );
 };
+
+export default Links;

@@ -14,7 +14,7 @@ import { PhotosHome } from "./photosHome/PhotosHome";
 }
 import { PhotosShow } from "./photosShow/PhotosShow";
 
-export const Photos = () => {
+const Photos = () => {
   return (
     <div className="w-screen h-fit bg-white">
       {/*插入照片主页组件 */}
@@ -24,3 +24,5 @@ export const Photos = () => {
     </div>
   );
 };
+
+export default Photos;

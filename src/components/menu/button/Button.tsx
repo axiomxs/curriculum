@@ -10,7 +10,7 @@ import React from "react";
 }
 import { motion } from "framer-motion";
 
-export const Button = ({ setOpen }) => {
+const Button = ({ setOpen }) => {
   return (
     <button
       className="fixed top-2 right-[25px] w-12 h-12 border-none bg-transparent rounded-full cursor-pointer"
@@ -51,3 +51,5 @@ export const Button = ({ setOpen }) => {
     </button>
   );
 };
+
+export default Button;

@@ -22,7 +22,7 @@ import { DigitalDistributionMiddle } from "./digitalDistributionMiddle/DigitalDi
 }
 import { DigitalDistributionShow } from "./digitalDistributionShow/DigitalDistributionShow";
 
-export const DigitalDistribution: React.FC = () => {
+const DigitalDistribution: React.FC = () => {
   return (
     <div className="w-full h-fit bg-white">
       {/*插入 数字发行物头部 组件 */}
@@ -36,3 +36,5 @@ export const DigitalDistribution: React.FC = () => {
     </div>
   );
 };
+
+export default DigitalDistribution;

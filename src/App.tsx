@@ -9,15 +9,15 @@ import { Outlet, Link } from "react-router-dom";
 {
   /*导入底部信息组件 */
 }
-import { Bottom } from "./components/bottom/Bottom";
+import Bottom from "./components/bottom/Bottom";
 {
   /*导入手机、平板顶部链接组件 */
 }
-import { Links } from "./components/menu/links/Links";
+import Links from "./components/menu/links/Links";
 {
   /*导入手机、平板顶部按钮组件 */
 }
-import { Button } from "./components/menu/button/Button";
+import Button from "./components/menu/button/Button";
 {
   /*导入motion动画 */
 }
@@ -31,10 +31,11 @@ import logo from "./assets/img/logo.png";
 }
 import "./app.css";
 import "./index.css";
+
 {
   /*遍历生成导航栏 */
 }
-export const App = () => {
+const App: React.FC = () => {
   {
     /*创建控制菜单显示与隐藏的状态 */
   }
@@ -63,6 +64,7 @@ export const App = () => {
       },
     },
   };
+
   return (
     <div className="relative box-border bg-[#f6f6f6]">
       <div className="sticky top-0 bottom-auto right-auto left-auto w-auto h-14 px-14 bg-[#f6f6f6]/60 backdrop-blur-md z-50">
@@ -109,3 +111,5 @@ export const App = () => {
     </div>
   );
 };
+
+export default App;

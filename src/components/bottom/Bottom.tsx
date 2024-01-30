@@ -10,7 +10,7 @@ import React from "react";
 }
 import notAI from "../../assets/icon/Written-By-Human-Not-By-AI-Badge-white.svg";
 
-export const Bottom = () => {
+const Bottom = () => {
   return (
     <div className="box-border max-w-[1400px] h-fit px-20 pb-14 bg-white overflow-hidden ">
       <div className="flex justify-between items-center flex-wrap w-full border-t-[1px] border-gray-300">
@@ -35,3 +35,4 @@ export const Bottom = () => {
     </div>
   );
 };
+export default Bottom;

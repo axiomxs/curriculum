@@ -24,7 +24,7 @@ interface Refs {
   imgRef: React.RefObject<HTMLImageElement>;
 }
 
-export const ContactMe: React.FC = () => {
+const ContactMe: React.FC = () => {
   {
     /* 图片视差效果 */
   }
@@ -182,3 +182,5 @@ export const ContactMe: React.FC = () => {
     </div>
   );
 };
+
+export default ContactMe;

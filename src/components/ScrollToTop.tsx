@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 {
   /*需要在所有路由变化都回到顶部，所以在一个顶层组件中监听路由的变化 */
 }
-export const ScrollToTop: React.FC<{ children?: React.ReactNode }> = ({
+const ScrollToTop: React.FC<{ children?: React.ReactNode }> = ({
   children,
 }) => {
   const location = useLocation();
@@ -19,3 +19,4 @@ export const ScrollToTop: React.FC<{ children?: React.ReactNode }> = ({
 
   return children;
 };
+export default ScrollToTop;

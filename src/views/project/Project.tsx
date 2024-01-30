@@ -22,7 +22,7 @@ import { AnnualDisplay } from "./annualDisplay/AnnualDisplay";
 }
 import { AppShow } from "./projectShow/ProjectShow";
 
-export const Project: React.FC = () => {
+const Project: React.FC = () => {
   return (
     <div className="w-screen h-fit bg-[#fafafc]">
       {/*插入 项目展示主页 组件 */}
@@ -36,3 +36,4 @@ export const Project: React.FC = () => {
     </div>
   );
 };
+export default Project;

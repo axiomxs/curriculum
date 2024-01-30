@@ -18,7 +18,7 @@ import { HomePage } from "./homePage/HomePage.jsx";
 }
 import { Introduction } from "./introduction/Introduction.jsx";
 
-export const Home = () => {
+const Home: React.FC = () => {
   return (
     <div className="w-screen h-fit">
       <TopText />
@@ -27,3 +27,4 @@ export const Home = () => {
     </div>
   );
 };
+export default Home;
