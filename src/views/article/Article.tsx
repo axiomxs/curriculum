@@ -17,6 +17,12 @@ import { useParams } from "react-router-dom";
   /*导入 监听渲染完毕 的高阶组件 */
 }
 import withLoading from "../../hoc/withLoading";
+
+interface CodeBlockProps {
+  code: string;
+  language: string;
+}
+
 {
   /*导入 图片渐变遮罩CSS  */
 }
@@ -122,8 +128,8 @@ const Article = () => {
       </div>
       <div className="divider pt-8 px-14"></div>
       <div className="mt-10 px-4 sm:px-20 md:px-40 lg:px-80">
-        <div className="p-5 text-xl text-black break-all leading-relaxed tracking-wider">
-          <div dangerouslySetInnerHTML={htmlobj} className="" />
+        <div className="language-css p-5 text-xl text-black break-all leading-relaxed tracking-wider">
+          <div dangerouslySetInnerHTML={htmlobj} />
         </div>
       </div>
     </div>

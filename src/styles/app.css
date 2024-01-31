@@ -14,6 +14,7 @@ a {
 li {
   list-style-type: none;
 }
+/* 背景模糊渐变遮罩 */
 .project-gradient {
   mask-image: linear-gradient(
     to top,
@@ -34,4 +35,34 @@ li {
     rgba(0, 0, 0, 0.987) 91.9%,
     black
   );
+}
+/* 防止Json数据中的Pre不换行，代码块样式 */
+pre {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  overflow-x: auto;
+  border-width: 2px;
+  border-color: rgb(148, 163, 184);
+  border-radius: 0.5rem;
+}
+
+/* 创建一个新的伪元素，并设置其样式为单独的一行 */
+pre::before {
+  content: "代码块";
+  display: block;
+  width: 100%;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+  text-align: center;
+  font-weight: bold;
+}
+
+code {
+  width: 100%;
+  max-width: full;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  overflow-x: auto;
 }
