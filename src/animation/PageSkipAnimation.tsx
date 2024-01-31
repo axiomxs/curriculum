@@ -31,7 +31,7 @@ const PageSkipAnimation = () => {
       }`}
     >
       <h1
-        className={`text-center text-7xl text-black transition-opacity duration-1000 z-50 ${
+        className={`text-center text-5xl lg:text-7xl text-black transition-opacity duration-1000 z-50 ${
           isShow ? "opacity-100" : "opacity-0"
         }`}
       >
