@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "address": "sharp-s2",
+    "img": "https://telegraph-image-6cq.pages.dev/file/1734a47997351394c9494.jpg",
+    "title": "文章",
+    "author": "By LingJue 📸",
+    "sort": "技术",
+    "date": "2024",
+    "abstract": "欢迎到访我的项目展示页面，这里将精彩呈现年度项目以及层出不穷的奇思妙想。每一次点击都将带领您探索无尽创意的边界，感受灵感碰撞的火花!",
+    "content": "<p>最近把手里的一台 sharp s2 给刷了 lineageos 17，也上了 magisk。</p>\n<span id=\"more\"></span>\n\n<p>root，玩安卓跟 linux的应该都知道，就是系统的最高权限，理论上可以对手机做任何你想做的事，这里就略微说一下 root 之后能干什么神奇而又<del>没啥用</del>的事。</p>\n<h2 id=\"模块\"><a href=\"#模块\" class=\"headerlink\" title=\"模块\"></a>模块</h2><p>magisk 的模块是一大特色，这里选几个我使用的模块，前三个是我自认为的必装模块。</p>\n<h3 id=\"LSPosed\"><a href=\"#LSPosed\" class=\"headerlink\" title=\"LSPosed\"></a>LSPosed</h3><p>这个就是 xposed 一个代替，能够通过给应用加 hooks 来修改应用行为，简称lsp<del>老色批</del>有 riru 和 zygisk 两种方案，目前更推荐 <code>zygisk</code> 这种方案，设置里没有开启 zygisk 的要先开启。</p>\n<p>lsp 内置模块仓库，可以很便捷的进行模块的安装，我只安装了 <code>QAuxiliary</code> 这一个模块（qq 增强）</p>\n<h3 id=\"Shamiko\"><a href=\"#Shamiko\" class=\"headerlink\" title=\"Shamiko\"></a>Shamiko</h3><p>这是一个用来隐藏 root 的模块，一般是使用 whitelist 白名单模式，详细教程可自行搜索。使用 shamiko 时务必注意不要开启 zygisk 设置中的 <code>遵守排除列表</code>。</p>\n<blockquote>\n<p>用了 shamiko 的话，你在给新应用授权 root 时，就需要关闭 shamiko，再重启，比较麻烦。所以建议在你预计所有使用 root 的应用都装完后再安装它。这里放在第二个只是因为它被广泛使用。</p>\n</blockquote>\n<h3 id=\"自动神仙救砖\"><a href=\"#自动神仙救砖\" class=\"headerlink\" title=\"自动神仙救砖\"></a>自动神仙救砖</h3><p>一个自动救砖模块，会检测你是否卡开机，如果是会自动禁用所有模块并重新尝试开机。为了安全与稳定，我认为这是必刷模块。</p>\n<blockquote>\n<p>我希望你永远用不到，但我希望你能一直安装并开启着它。</p>\n</blockquote>\n<hr>\n<p>接下来就是可选模块了，看个人需求。</p>\n<h3 id=\"Twemoji-replacer\"><a href=\"#Twemoji-replacer\" class=\"headerlink\" title=\"Twemoji replacer\"></a>Twemoji replacer</h3><p>默认的 emoji 比较丑，刷这个包可以使用推特<del>X</del>的 emoji 来替换默认系统中的，当然仅限于本机。</p>\n<h3 id=\"xmlpak\"><a href=\"#xmlpak\" class=\"headerlink\" title=\"xmlpak\"></a>xmlpak</h3><p>google play 中有许多比较好的 oem 应用，但是非本厂的应用你是看不到的，这个应用能让你看得到、下得了。</p>\n<h3 id=\"Lookie75-Product-Sans-Font\"><a href=\"#Lookie75-Product-Sans-Font\" class=\"headerlink\" title=\"Lookie75 Product Sans Font\"></a>Lookie75 Product Sans Font</h3><p>类原生系统中一般没有主题商店，默认字体比较丑，刷入这个包可以使用 google product sans，也就是现在新安卓的字体。</p>\n<h3 id=\"gboard-user-dict-3-3-词库\"><a href=\"#gboard-user-dict-3-3-词库\" class=\"headerlink\" title=\"gboard user_dict_3_3 词库\"></a>gboard user_dict_3_3 词库</h3><p>一个 gboard 输入法词库，比较全面。</p>\n<h2 id=\"软件\"><a href=\"#软件\" class=\"headerlink\" title=\"软件\"></a>软件</h2><p>root，软件也是一个重要部分的啦（</p>\n<h3 id=\"爱玩机工具箱\"><a href=\"#爱玩机工具箱\" class=\"headerlink\" title=\"爱玩机工具箱\"></a>爱玩机工具箱</h3><p>酷安发现的宝藏应用，<del>可以看出作者是想迎合 material you 的</del>，主要就是使用 root 权限对设备进行管理，功能比较全面，像 apk 安装器，命令执行器，应用卸载器都是有的。</p>\n<h3 id=\"Shizuku\"><a href=\"#Shizuku\" class=\"headerlink\" title=\"Shizuku\"></a>Shizuku</h3><p>也是一种权限管理器，可以通过 root 激活，能够给其他应用一种低于 root，类似 adb 的权限，通过它可以更好的管理 root 的使用<del>毕竟你也不能啥应用都给 root 吧</del></p>\n<h3 id=\"雹\"><a href=\"#雹\" class=\"headerlink\" title=\"雹\"></a>雹</h3><p>一种类似冰箱的程序冻结器，免费开源，建议通过 shizuku 进行激活。</p>\n<h3 id=\"MT-管理器\"><a href=\"#MT-管理器\" class=\"headerlink\" title=\"MT 管理器\"></a>MT 管理器</h3><p>一个文件管理器，功能强大，但 ui 丑陋，而且部分功能须充钱。但还是一个不错的文件管理器，也可以使用<strong>质感文件</strong>，更美观且免费开源，但功能就要少不少了。</p>\n<h3 id=\"App-manager\"><a href=\"#App-manager\" class=\"headerlink\" title=\"App manager\"></a>App manager</h3><p>一个应用管理器，功能更加强大，还能提取已安装应用的 apk。</p>\n<h3 id=\"Androidacy-模块管理器\"><a href=\"#Androidacy-模块管理器\" class=\"headerlink\" title=\"Androidacy 模块管理器\"></a>Androidacy 模块管理器</h3><p>自从 magisk 不内置模块商店之后，找模块就是一个问题。使用这个应用可以解决部分问题。</p>\n<h2 id=\"一些操作\"><a href=\"#一些操作\" class=\"headerlink\" title=\"一些操作\"></a>一些操作</h2><h3 id=\"Webview\"><a href=\"#Webview\" class=\"headerlink\" title=\"Webview\"></a>Webview</h3><p>各大厂商 webview 几乎都是严重落后的版本。许多应用是依赖 webview 的，所以有必要进行更新。</p>\n<p>首先需要去得到新 webview 的包，可以去各种途径下载，下载后安装。然后在<strong>爱玩机工具箱</strong>中的<strong>一个终端</strong>中输入：</p>\n<pre class=\"line-numbers language-bash\" data-language=\"bash\"><code class=\"language-bash\">settings put global webview_provider com.google.android.webview<span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span></span></code></pre>\n\n<p>之后重启，在开发者模式中的 webview 提供程序中查看，如果出现了新的版本，就代表成功了，点击新版应用即可。如果没有出现新版 webview，可以按照这个试试：<a href=\"https://blog.csdn.net/weixin_44565784/article/details/126370271\">https://blog.csdn.net/weixin_44565784/article/details/126370271</a></p>\n"
+  },
+  {
+    "id": 2,
+    "address": "b",
+    "img": "https://telegraph-image-6cq.pages.dev/file/1734a47997351394c9494.jpg",
+    "title": "文章",
+    "author": "By LingJue 📸",
+    "sort": "a",
+    "date": "2024",
+    "abstract": "简述内容简述内容简述内容简述内容简述内容简述内容简述内容简述内容",
+    "content": "<pre><span class=\"line\"><span class=\"function\"><span class=\"keyword\">function</span> <span class=\"title\">link</span>(<span class=\"params\">args</span>) </span>{<br><span class=\"line\">    args = args.join(<span class=\"string\">' '</span>).split(<span class=\"string\">','</span>);</span><br><span class=\"line\">    <span class=\"keyword\">let</span> title = args[<span class=\"number\">0</span>];</span><br><span class=\"line\">    <span class=\"keyword\">let</span> sitename = args[<span class=\"number\">1</span>];</span><br><span class=\"line\">    <span class=\"keyword\">let</span> link = args[<span class=\"number\">2</span>];</span><br><span class=\"line\"></span><br><span class=\"line\">    <span class=\"comment\">// 获取网页favicon</span></span><br><span class=\"line\">    <span class=\"keyword\">let</span> urlNoProtocol = link.replace(<span class=\"regexp\">/^https?\\:/\\//i</span>, <span class=\"string\">''</span>);</span><br><span class=\"line\">    <span class=\"keyword\">let</span> imgUrl = <span class=\"string\">'https://api.iowen.cn/favicon/'</span> + urlNoProtocol + <span class=\"string\">'.png'</span>;</span><br><span class=\"line\"></span><br><span class=\"line\">    <span class=\"keyword\">return</span> <span class=\"string\">`&lt;a class=\"tag-Link\" target=\"_blank\" href=\"<span class=\"subst\">${link}</span>\"&gt;</span></span><br><span class=\"line\"><span class=\"string\">    &lt;div class=\"tag-link-tips\"&gt;引用站外地址&lt;/div&gt;</span></span><br><span class=\"line\"><span class=\"string\">    &lt;div class=\"tag-link-bottom\"&gt;</span></span><br><span class=\"line\"><span class=\"string\">        &lt;div class=\"tag-link-left\" style=\"background-image: url(<span class=\"subst\">${imgUrl}</span>);\"&gt;&lt;/div&gt;</span></span><br><span class=\"line\"><span class=\"string\">        &lt;div class=\"tag-link-right\"&gt;</span></span><br><span class=\"line\"><span class=\"string\">            &lt;div class=\"tag-link-title\"&gt;<span class=\"subst\">${title}</span>&lt;/div&gt;</span></span><br><span class=\"line\"><span class=\"string\">            &lt;div class=\"tag-link-sitename\"&gt;<span class=\"subst\">${sitename}</span>&lt;/div&gt;</span></span><br><span class=\"line\"><span class=\"string\">        &lt;/div&gt;</span></span><br><span class=\"line\"><span class=\"string\">        &lt;i class=\"fa-solid fa-angle-right\"&gt;&lt;/i&gt;</span></span><br><span class=\"line\"><span class=\"string\">    &lt;/div&gt;</span></span><br><span class=\"line\"><span class=\"string\">    &lt;/a&gt;`</span></span><br><span class=\"line\">}</span><br><span class=\"line\"></span><br><span class=\"line\">hexo.extend.tag.register(<span class=\"string\">'link'</span>, link, { <span class=\"attr\">ends</span>: <span class=\"literal\">false</span> })</span><br></pre>"
+  },
+  {
+    "id": 3,
+    "address": "c",
+    "img": "https://telegraph-image-6cq.pages.dev/file/1734a47997351394c9494.jpg",
+    "title": "文章",
+    "author": "By LingJue 📸",
+    "sort": "a",
+    "date": "2024",
+    "abstract": "简述内容简述内容简述内容简述内容简述内容简述内容简述内容简述内容",
+    "content": "xxxxxxxxxxxxxxx"
+  },
+  {
+    "id": 4,
+    "address": "d",
+    "img": "https://telegraph-image-6cq.pages.dev/file/1734a47997351394c9494.jpg",
+    "title": "文章",
+    "author": "By LingJue 📸",
+    "sort": "a",
+    "date": "2024",
+    "abstract": "简述内容简述内容简述内容简述内容简述内容简述内容简述内容简述内容",
+    "content": "xxxxxxxxxxxxxxx"
+  },
+  {
+    "id": 5,
+    "address": "e",
+    "img": "https://telegraph-image-6cq.pages.dev/file/1734a47997351394c9494.jpg",
+    "title": "文章",
+    "author": "By LingJue 📸",
+    "sort": "技术",
+    "date": "2024",
+    "abstract": "简述内容简述内容简述内容简述内容简述内容简述内容简述内容简述内容",
+    "content": "xxxxxxxxxxxxxxx"
+  },
+  {
+    "id": 6,
+    "address": "f",
+    "img": "https://telegraph-image-6cq.pages.dev/file/1734a47997351394c9494.jpg",
+    "title": "文章",
+    "author": "By LingJue 📸",
+    "sort": "a",
+    "date": "2024",
+    "abstract": "简述内容简述内容简述内容简述内容简述内容简述内容简述内容简述内容",
+    "content": "xxxxxxxxxxxxxxx"
+  }
+]

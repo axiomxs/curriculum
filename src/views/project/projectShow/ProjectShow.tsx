@@ -14,9 +14,9 @@ import { Link } from "react-router-dom";
 }
 import { motion } from "framer-motion";
 {
-  /*从本地获取json数据 */
+  /*从本地获取json数据  ./appShow.json*/
 }
-import datas from "./appshow.json";
+import datas from "../../../../public/json/appShow.json";
 
 {
   /*定义 ProjectShowItem 接口以增强类型安全性 */

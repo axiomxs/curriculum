@@ -14,9 +14,9 @@ import { Link } from "react-router-dom";
 }
 import { motion } from "framer-motion";
 {
-  /*从本地获取json数据 */
+  /*从本地获取json数据  ./annualDisplay.json*/
 }
-import datas from "./annualdisplay.json";
+import datas from "../../../../annualDisplay.json";
 
 {
   /*定义 AnnualItem 接口以增强类型安全性 */

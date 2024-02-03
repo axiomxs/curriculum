@@ -14,9 +14,9 @@ import { motion } from "framer-motion";
 }
 import LazyLoad from "react-lazyload";
 {
-  /*导入图片展示数据 */
+  /*导入图片展示数据  ./photosShow.json*/
 }
-import datas from "./photosShow.json";
+import datas from "../../../../photosShow.json";
 
 {
   /*（接口）定义 PhotoItem 接口以增强类型安全性 */
