@@ -34,10 +34,18 @@ interface SelectionItem {
 }
 
 export const ArticleShow: React.FC = () => {
+  {
+    /*
+    数据反向：最新的数据先展示
+    */
+  }
+  const reversedData = React.useMemo(() => {
+    return datas.reverse();
+  }, []);
   return (
     <div className="w-full h-fit px-16 sm:px-40 md:px-44 lg:px-44 xl:px-44 pb-20 overflow-hidden">
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:lg:grid-cols-3 w-full h-full px-2 gap-4 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-8">
-        {datas.map((item: SelectionItem) => (
+        {reversedData.map((item: SelectionItem) => (
           <Link to={`/diary/${item.address}`} key={item.id}>
             <div className="group flex flex-col w-full aspect-[1/1.13] rounded-3xl overflow-hidden shadow-lg md:shadow-none shadow-true-gray-200 transition duration-500 ease-in-out transform-gpu hover:scale-95 hover:shadow-lg mobile-hover:hover:scale-95 md:hover:shadow-lg hover:rotate-0 hover:active:scale-95">
               <LazyLoad

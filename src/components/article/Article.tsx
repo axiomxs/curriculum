@@ -2,13 +2,18 @@
   /*文章 组件*/
 }
 {
-  /*导入React、useState、useEffect */
+  /*导入 React、useState、useEffect */
 }
 import React, { useState, useEffect } from "react";
 {
-  /*导入 返回上个页面 history 钩子 */
+  /*导入 ReactMarkdown */
 }
-import { useNavigate } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
+{
+  /*导入 rehypeRaw */
+}
+import rehypeRaw from "rehype-raw";
 {
   /*获取 路径动态参数 钩子 */
 }
@@ -17,12 +22,6 @@ import { useParams } from "react-router-dom";
   /*导入 监听渲染完毕 的高阶组件 */
 }
 import withLoading from "../../hoc/withLoading";
-
-interface CodeBlockProps {
-  code: string;
-  language: string;
-}
-
 {
   /*导入 图片渐变遮罩CSS  */
 }
@@ -66,37 +65,34 @@ const Article = () => {
   }
   const address = params.address;
   {
-    /*从数据中过滤出与当前地址匹配的文章内容 */
+    /*从数据中过滤出与当前地址匹配的文章内容  */
   }
   const data: ArticleItem[] = datas.filter((item) => item.address === address);
   {
-    /*获取第一个匹配项的内容，使用可选链运算符避免未定义时引发的错误 */
+    /*解析地址对应的 md 文件 */
   }
-  const html = data[0]?.content || "";
-  {
-    /*创建一个内联 HTML 对象，用于设置 dangerouslySetInnerHTML 属性 */
-  }
-  const htmlobj = { __html: html };
-  {
-    /*
-    使用 useNavigate 获取路由导航功能 
-    const navigate = useNavigate();
-  */
-  }
-  {
-    /*
-    创建一个函数 handleGoBack 用于返回上一个页面(数字出版页面) 
-    const handleGoBack = () => {
-    navigate(-1);
-  };
-  */
-  }
+  const [mdContent, setMDContent] = useState<string>("");
+  useEffect(() => {
+    fetch(`./posts/${address}.md`)
+      .then((res) => res.text())
+      .then((md) => setMDContent(md))
+      .catch((error) => console.error("Error fetching Markdown:", error));
+  }, [address]);
   {
     /*检查数据源是否存在数据 */
   }
   if (!datas[0]) {
     return <div>Loading...</div>;
   }
+
+  {
+    /*渲染 json 中 html 写法
+    获取第一个匹配项的内容，使用可选链运算符避免未定义时引发的错误 
+    const html = data[0]?.content || "";
+    创建一个内联 HTML 对象，用于设置 dangerouslySetInnerHTML 属性 
+    const htmlobj = { __html: html };*/
+  }
+
   return (
     <div className="w-full h-fit bg-white mb-10 overflow-hidden">
       <div
@@ -129,7 +125,11 @@ const Article = () => {
       <div className="divider pt-8 px-14"></div>
       <div className="mt-10 px-4 sm:px-20 md:px-40 lg:px-80">
         <div className="p-5 text-xl text-black break-all leading-relaxed tracking-wider">
-          <div dangerouslySetInnerHTML={htmlobj} />
+          <ReactMarkdown
+            remarkPlugins={[gfm]}
+            rehypePlugins={[rehypeRaw]}
+            children={mdContent}
+          ></ReactMarkdown>
         </div>
       </div>
     </div>
