@@ -83,6 +83,7 @@ const App: React.FC = () => {
               使用a标签会完整刷新页面，而link则只加载路由 
             */}
             <Link to="/">主页 & 项目</Link>
+            <Link to="/article">壹些文章</Link>
             <Link to="/digital">数字出版</Link>
             <Link to="/photos">照片展示</Link>
             <Link to="/contact">联系我</Link>

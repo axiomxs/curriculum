@@ -31,7 +31,7 @@ export const PhotosHome = () => {
           <p className="text-black text-base font-bold ">By LingJue 📸</p>
           <div className="my-8 lg:my-14 leading-10">
             <span className="bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out transform-gpu text-black text-wrap text-4xl lg:text-5xl font-black tracking-wider hover:bg-[length:100%_30%]">
-              🎈🎈欢迎来到我的照片集 #万物可爱
+              🎈🎈欢迎来到我的照片集 #万物有灵
             </span>
           </div>
 

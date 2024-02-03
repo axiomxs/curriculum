@@ -22,6 +22,10 @@ import App from "../App";
 }
 import Project from "../views/project/Project";
 {
+  /*导入 博客文章 组件*/
+}
+import Article from "../views/article/Article";
+{
   /*导入 数字发行物 组件*/
 }
 import DigitalDistribution from "../views/digitalDistribution/DigitalDistribution";
@@ -36,7 +40,7 @@ import ContactMe from "../views/contactMe/ContactMe";
 {
   /*导入 文章 组件*/
 }
-import Article from "../views/article/Article";
+import ArticleShow from "../components/article/Article";
 {
   /*导入 NotFound 组件*/
 }
@@ -47,10 +51,11 @@ const Router = () => {
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="/" element={<Project />} />
+        <Route path="/article" element={<Article />} />
         <Route path="/digital" element={<DigitalDistribution />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/contact" element={<ContactMe />} />
-        <Route path="/diary/:address" element={<Article />}></Route>
+        <Route path="/diary/:address" element={<ArticleShow />}></Route>
       </Route>
       <Route path="*" element={<Notfound />} />
     </Routes>

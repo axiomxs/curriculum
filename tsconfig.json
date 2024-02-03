@@ -5,6 +5,8 @@
     "sourceMap": true,
     "jsx": "react-jsx",
     "module": "esnext",
+    "outDir": "./dist",
+    "downlevelIteration": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

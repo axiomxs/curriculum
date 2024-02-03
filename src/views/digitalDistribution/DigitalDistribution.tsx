@@ -14,10 +14,6 @@ import withLoading from "../../hoc/withLoading";
 }
 import { DigitalDistributionTop } from "./digitalDistributionTop/DigitalDistributionTop";
 {
-  /*导入 数字发行物介绍 组件 */
-}
-import { DigitalDistributionIntroduce } from "./digitalDistributionIntroduce/DigitalDistributionIntroduce";
-{
   /*导入 数字发行物连接 组件 */
 }
 import { DigitalDistributionMiddle } from "./digitalDistributionMiddle/DigitalDistributionMiddle";
@@ -31,8 +27,6 @@ const DigitalDistribution: React.FC = () => {
     <div className="w-full h-fit bg-white">
       {/*插入 数字发行物头部 组件 */}
       <DigitalDistributionTop />
-      {/*插入 数字发行物介绍 组件 */}
-      <DigitalDistributionIntroduce />
       {/*插入 数字发行物连接 组件 */}
       <DigitalDistributionMiddle />
       {/*插入 数字发行物展示 组件 */}

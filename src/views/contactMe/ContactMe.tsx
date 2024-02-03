@@ -15,14 +15,14 @@ import withLoading from "../../hoc/withLoading";
 import contact from "../../assets/icon/contact.svg";
 
 {
-  /*（接口）定义 ContactForm 和 Refs 接口以增强类型安全性 */
-}
-interface ContactForm {
+  /*（接口）定义 ContactForm 和 Refs 接口以增强类型安全性 
+  interface ContactForm {
   name: string;
   email: string;
   message: string;
 }
-
+*/
+}
 interface Refs {
   headerRef: React.RefObject<HTMLDivElement>;
   imgRef: React.RefObject<HTMLImageElement>;
@@ -82,22 +82,6 @@ const ContactMe: React.FC = () => {
     };
   }, [scrollDistance]);
 
-  {
-    /*表单处理事件（待完成） */
-  }
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    const formData: ContactForm = {
-      name: "name",
-      email: "email",
-      message: "message",
-    };
-    console.log(formData);
-  };
-
-  const handleButtonClick = () => {};
-
   return (
     <div className="w-full h-fit overflow-hidden">
       <header ref={refs.headerRef} className="relative">
@@ -151,31 +135,38 @@ const ContactMe: React.FC = () => {
               </span>
             </div>
             <form
-              onSubmit={handleSubmit}
+              action="https://formspree.io/f/mrgnppwv"
+              method="post"
               className="w-full sm:w-full lg:w-[700px]"
             >
               <input
                 type="text"
                 className="py-3 px-6 lg:px-8 w-full h-[60px] sm:h-[70px] lg:h-[80px] border border-[#d6d6d6] bg-white text-black input-text text-xl rounded-lg transition duration-500 ease-in-out transform-gpu hover:border-pink-500"
                 id="username"
+                name="name"
                 placeholder="您的名字"
+                required
               />
               <input
                 type="text"
                 className="mt-8 py-3 px-6 lg:px-8 w-full h-[60px] sm:h-[70px] lg:h-[80px] border border-[#d6d6d6] bg-white text-black input-text text-xl rounded-lg transition duration-500 ease-in-out transform-gpu hover:border-pink-500"
                 id="email"
+                name="email"
                 placeholder="您的邮箱"
+                required
               />
               <textarea
                 rows={1}
-                placeholder="请输入您很棒的想法..."
                 className="mt-8 py-8 px-6 lg:px-8 w-full h-[150px] sm:h-[200px] lg:h-[300px] border border-[#d6d6d6] bg-white text-xl text-black rounded-lg overflow-x-hidden overflow-y-auto whitespace-pre-wrap outline-none outline-transparent outline-offset-2 break-normal transition duration-500 ease-in-out transform-gpu hover:border-pink-500"
-                id="think"
+                id="message"
+                name="message"
+                placeholder="请输入您很棒的想法..."
+                required
               ></textarea>
 
               <button
                 className="mt-8 mb-10 px-7 w-28 h-12 border border-[#d6d6d6] bg-transparent text-xl text-black rounded-[100px] cursor-pointer"
-                onClick={handleButtonClick}
+                type="submit"
               >
                 提交
               </button>

@@ -27,9 +27,19 @@ interface PhotoItem {
   author: string;
   title: string;
   introduce: string;
+  tag: string[];
 }
 
 export const PhotosShow = () => {
+  {
+    /*
+    数据反向：最新的数据先展示
+    为避免可能造成不必要的UI重绘和重新布局，将反转数据的操作移动到useMemo以确保只执行一次
+    */
+  }
+  const reversedData = React.useMemo(() => {
+    return datas.reverse();
+  }, []);
   {
     /*（滚动）使用useState Hook初始化状态变量scrollDistance，用于记录滚动距离 */
   }
@@ -147,7 +157,7 @@ export const PhotosShow = () => {
       className="box-border w-full h-fit px-6 sm:px-10 md:px-20 lg:px-20 bg-transparent overflow-hidden"
     >
       {/*使用map遍历，并通过对id的奇偶区分，分别设置样式，实现【图片 + 文字】块棋格布局 */}
-      {datas.map((item: PhotoItem) => (
+      {reversedData.map((item: PhotoItem) => (
         <div
           className={`flex mb-6 lg:mb-0 ${
             item.id % 2 === 0
@@ -175,7 +185,9 @@ export const PhotosShow = () => {
               item.id % 2 === 0 ? "lg:items-end" : "lg:items-start"
             }`}
           >
-            <p className="text-black text-base lg:text-md font-bold ">{item.author}</p>
+            <p className="text-black text-base lg:text-md font-bold ">
+              {item.author}
+            </p>
             <div className="my-8 lg:my-14 leading-10">
               <span className="bg-gradient-to-r from-[#ff0f77] to-[#ff0f77] bg-no-repeat bg-[length:0px_30%] bg-left-bottom transition-[background-size] duration-[1000ms] ease-in-out transform-gputext-black text-black text-wrap text-4xl lg:text-5xl font-black hover:bg-[length:100%_30%]">
                 {item.title}
@@ -186,12 +198,11 @@ export const PhotosShow = () => {
               {item.introduce}
             </p>
             <div className="flex gap-2.5 mt-8 lg:mt-14">
-              <p className="p-1 text-black tracking-wider rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
-                摄影
-              </p>
-              <p className="p-1 text-black tracking-wider rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
-                旅拍
-              </p>
+              {item.tag.map((tag) => (
+                <p className="p-1 text-black tracking-wider rounded-xl hover:text-orange-400 hover:bg-yellow-400/20 transition-all duration-300 ease-in-out transform-gpu">
+                  {tag}
+                </p>
+              ))}
             </div>
           </div>
         </div>

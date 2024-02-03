@@ -114,6 +114,14 @@ const Links = () => {
         主页 & 项目
       </MotionLink>
       <MotionLink
+        to="/article"
+        variants={itemVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        壹些文章
+      </MotionLink>
+      <MotionLink
         to="/digital"
         variants={itemVariants}
         whileHover={{ scale: 1.1 }}
