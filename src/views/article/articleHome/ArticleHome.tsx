@@ -17,7 +17,7 @@ import "../../../styles/app.css";
 export const ArticleHome = () => {
   return (
     <div className="w-full h-fit pb-28">
-      <div className="project-gradient absolute top-0 left-0 right-0 h-[60vh] bg-[url('https://telegraph-image-6cq.pages.dev/file/5703ee26c8d74c8d43857.jpg')] bg-no-repeat bg-center bg-scroll bg-cover z-10" />
+      <div className="project-gradient absolute top-0 left-0 right-0 h-[60vh] bg-[url('https://telegraph-image-6cq.pages.dev/file/5703ee26c8d74c8d43857.jpg')] bg-no-repeat bg-left-bottom lg:bg-center bg-scroll bg-cover z-10" />
       <div className="relative flex flex-col w-full md:w-[70%] lg:w-[980px] h-fit mt-16 mb-2 px-10 xl:px-20 z-20">
         <span className="text-black text-6xl sm:text-7xl lg:text-8xl lg:leading-tight">
           Create, Show and Enjoy, Welcome!

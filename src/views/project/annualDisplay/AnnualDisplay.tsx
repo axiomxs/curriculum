@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 {
   /*从本地获取json数据  ./annualDisplay.json*/
 }
-import datas from "../../../../annualDisplay.json";
+import datas from "../../../../public/json/annualdisplay.json";
 
 {
   /*定义 AnnualItem 接口以增强类型安全性 */

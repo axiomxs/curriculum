@@ -18,7 +18,6 @@ export default defineConfig({
       include: ["./src/posts/*.md"], // 要导入的Markdown文件路径
       wrapperClasses: "markdown-body",
       fileExtensions: ["md", "mdx"],
-      wrapperClasses: "markdown-body",
       evergreen: true,
       headEnabled: true,
       markdownSrcDir: "posts",

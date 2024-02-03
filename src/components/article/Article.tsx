@@ -45,12 +45,6 @@ interface ArticleItem {
   abstract: string;
   content: string;
 }
-{
-  /*（接口）定义 ArticleParams 接口，表示URL中的动态地址参数 */
-}
-interface ArticleParams {
-  address: string;
-}
 
 const Article = () => {
   {
@@ -94,7 +88,7 @@ const Article = () => {
   }
 
   return (
-    <div className="w-full h-fit bg-white mb-10 overflow-hidden">
+    <div className="w-full h-fit bg-white pb-10 overflow-hidden">
       <div
         className="project-gradient absolute top-0 left-0 right-0 h-[60vh] bg-no-repeat bg-center bg-scroll bg-cover z-10"
         style={{ backgroundImage: `url('${data[0].img}')` }}
@@ -117,7 +111,9 @@ const Article = () => {
             />
           </div>
           <div className="flex flex-col pl-6">
-            <span className="text-black text-sm">{data[0].author}</span>
+            <span className="text-black text-sm">
+              {data[0].author || "LingJue"}
+            </span>
             <span className="text-black text-sm">{data[0].date}</span>
           </div>
         </div>

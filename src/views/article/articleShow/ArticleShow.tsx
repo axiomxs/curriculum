@@ -16,7 +16,7 @@ import LazyLoad from "react-lazyload";
 {
   /*导入图片展示数据  ./articleShow.json*/
 }
-import datas from "../../../../articleShow.json";
+import datas from "../../../../public/json/articleShow.json";
 
 {
   /*（接口）定义 SelectionItem 接口以增强类型安全性 */

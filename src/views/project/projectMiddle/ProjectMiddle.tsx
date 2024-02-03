@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 {
   /*导入图片展示数据  ./projectMiddle.json*/
 }
-import datas from "../../../../projectMiddle.json";
+import datas from "../../../../public/json/projectMiddle.json";
 
 {
   /*（接口）定义 ProjectMiddleItem 接口以增强类型安全性 */
