@@ -59,7 +59,7 @@ const App: React.FC = () => {
       transition: {
         delay: 0.5,
         type: "spring",
-        stiffness: 400,
+        stiffness: 500,
         damping: 40,
       },
     },
