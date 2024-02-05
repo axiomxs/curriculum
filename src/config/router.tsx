@@ -55,7 +55,7 @@ const Router = () => {
         <Route path="/digital" element={<DigitalDistribution />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/contact" element={<ContactMe />} />
-        <Route path="/diary/:address" element={<ArticleShow />}></Route>
+        <Route path="/article/:address" element={<ArticleShow />}></Route>
       </Route>
       <Route path="*" element={<Notfound />} />
     </Routes>

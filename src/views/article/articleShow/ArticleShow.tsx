@@ -16,7 +16,7 @@ import LazyLoad from "react-lazyload";
 {
   /*导入图片展示数据  ./articleShow.json*/
 }
-import datas from "../../../../public/json/articleShow.json";
+import datas from "./articleShow.json";
 {
   /*导入 css*/
 }
@@ -30,7 +30,7 @@ interface SelectionItem {
   img: string;
   title: string;
   author?: string;
-  sort?: string;
+  sort?: string[];
   date?: string;
   abstract?: string;
   content?: string;
@@ -50,7 +50,7 @@ export const ArticleShow: React.FC = () => {
       <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-5 w-full pr-0 xl:pr-[300px] transition-all duration-300 ease-in-out transform-gpu">
         {reversedData.map((item: SelectionItem) => (
           <Link
-            to={`/diary/${item.address}`}
+            to={`/article/${item.address}`}
             key={item.id}
             className="group flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-col w-full h-fit mt-4 mb-3 xl:mt-1 xl:mb-3 border border-[#f0f0f0] hover:border-[#ffc848] rounded-xl cursor-pointer overflow-hidden shadow-lg md:shadow-none shadow-true-gray-200 transition duration-300 ease-in-out transform-gpu hover:shadow-lg"
           >
@@ -66,9 +66,13 @@ export const ArticleShow: React.FC = () => {
             </LazyLoad>
             <div className="flex flex-col justify-between w-full h-36 md:h-[220px] xl:h-[174px] p-6 lg:p-10 xl:p-6 bg-white rounded-b-xl cursor-pointer">
               <div className="flex flex-col justify-between items-start">
-                <p className="hidden md:block mb-2 text-xs text-black font-bold text-red-500 leading-2">
-                  {item.sort}
-                </p>
+                <div className="flex gap-2.5">
+                  {item.sort.map((sort) => (
+                    <p className="hidden md:block mb-2 text-xs text-black font-bold text-red-500 leading-2">
+                      {sort}
+                    </p>
+                  ))}
+                </div>
                 <p className="text-xl md:text-xl lg:text-2xl text-black group-hover:text-[#ffc848] line-clamp-2 leading-tight md:leading-tight lg:leading-tight font-bold text-wrap transition duration-300 ease-in-out transform-gpu ">
                   {item.title}
                 </p>

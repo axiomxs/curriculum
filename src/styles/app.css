@@ -41,6 +41,8 @@ pre {
   position: relative;
   width: 100%;
   max-width: 100%;
+  margin-top: 14px;
+  margin-bottom: 14px;
   padding: 10px;
   overflow-x: auto;
   border-width: 2px;
@@ -53,7 +55,6 @@ pre::before {
   content: "代码块";
   display: block;
   width: 100%;
-  margin-bottom: 14px;
   background-color: #f7f7f9;
   text-align: center;
   font-weight: bold;

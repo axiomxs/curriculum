@@ -27,9 +27,10 @@ import withLoading from "../../hoc/withLoading";
 }
 import "../../styles/app.css";
 {
-  /*导入 文章 数据 */
+  /*导入 文章 数据 ../../views/article/articleShow/articleShow.json*/
 }
 import datas from "../../views/article/articleShow/articleShow.json";
+import AbstractOfArticle from "../AiAbstractOfArticle";
 
 {
   /*（接口）定义 ArticleItem 接口以增强类型安全性 */
@@ -40,10 +41,9 @@ interface ArticleItem {
   img: string;
   title: string;
   author?: string;
-  sort: string;
+  sort: string[];
   date: string;
   abstract: string;
-  content: string;
 }
 
 const Article = () => {
@@ -61,7 +61,7 @@ const Article = () => {
   {
     /*从数据中过滤出与当前地址匹配的文章内容  */
   }
-  const data: ArticleItem[] = datas.filter((item) => item.address === address);
+  const data = datas.filter((item) => item.address === address);
   {
     /*解析地址对应的 md 文件 */
   }
@@ -93,14 +93,18 @@ const Article = () => {
         className="project-gradient absolute top-0 left-0 right-0 h-[60vh] bg-no-repeat bg-center bg-scroll bg-cover z-10"
         style={{ backgroundImage: `url('${data[0].img}')` }}
       />
-      <div className="relative flex flex-col w-full md:w-[70%] lg:w-[980px] h-fit mt-16 mb-2 px-10 xl:px-20 z-20">
-        <span className="w-fit px-3 py-1 border border-black rounded-2xl text-black text-sm">
-          {data[0].sort}
-        </span>
-        <span className="mt-2 text-black text-6xl sm:text-7xl lg:text-8xl lg:leading-tight">
+      <div className="relative flex flex-col w-full md:w-[70%] lg:w-[980px] xl:w-full h-fit mt-16 mb-2 px-10 xl:px-20 z-20">
+        <div className="flex gap-2.5">
+          {data[0].sort.map((sort) => (
+            <span className="w-fit px-3 py-1 bg-white/25 rounded-xl text-black font-bold text-center hover:bg-white transition-all duration-300 ease-in-out transform-gpu">
+              {sort}
+            </span>
+          ))}
+        </div>
+        <span className="mt-2 text-black text-6xl sm:text-7xl lg:leading-tight">
           {data[0].title}
         </span>
-        <span className="mt-6 text-black text-xl lg:text-2xl leading-normal tracking-wide font-bold">
+        <span className="w-fit mt-6 px-3 text-black text-xl lg:text-2xl leading-normal tracking-wide font-bold hover:bg-white/25 transition-all duration-300 ease-in-out transform-gpu">
           {data[0].abstract}
         </span>
         <div className="flex mt-10">
@@ -119,7 +123,21 @@ const Article = () => {
         </div>
       </div>
       <div className="divider pt-8 px-14"></div>
-      <div className="mt-10 px-4 sm:px-20 md:px-40 lg:px-80">
+      <div className="mt-10 px-4 sm:px-20 md:px-40 lg:px-64">
+        <div className="min-h-[100px] p-3 bg-[#f7f9fe] border border-[#e3e8f7] rounded-xl ">
+          <div className="flex justify-between items-center px-3 text-[#ffc848]">
+            <span className="text-lg">文章摘要</span>
+            <span className="py-1 px-3 bg-[#ffc848] text-base text-black rounded-xl">
+              Gemini
+            </span>
+          </div>
+          <div className="mt-3 py-2 px-3 bg-white rounded-xl text-lg text-black text-left">
+            <AbstractOfArticle inputText={mdContent} />
+          </div>
+          <div className="pt-2 px-3 text-base text-[#363636]">
+            此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结
+          </div>
+        </div>
         <div className="p-5 text-xl text-black break-all leading-relaxed tracking-wider">
           <ReactMarkdown
             remarkPlugins={[gfm]}

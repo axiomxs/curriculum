@@ -16,7 +16,7 @@ import { motion } from "framer-motion";
 {
   /*从本地获取json数据  ./appShow.json*/
 }
-import datas from "../../../../public/json/appShow.json";
+import datas from "./appShow.json";
 
 {
   /*定义 ProjectShowItem 接口以增强类型安全性 */

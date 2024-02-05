@@ -24,7 +24,7 @@ import right from "../../../assets/icon/icon_wheat_right.svg";
 {
   /*导入 数据  ./digital.json*/
 }
-import datas from "../../../../public/json/digital.json";
+import datas from "./digital.json";
 
 {
   /*定义 DigitalItem 接口以增强类型安全性 */
