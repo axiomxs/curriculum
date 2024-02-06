@@ -36,7 +36,7 @@ import "../../styles/app.css";
 {
   /*导入 文章 数据 ../../views/article/articleShow/articleShow.json*/
 }
-import datas from "../../views/article/articleShow/articleShow.json";
+import datas from "../../../public/json/articleShow.json";
 
 {
   /*（接口）定义 ArticleItem 接口以增强类型安全性 */
