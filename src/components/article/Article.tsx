@@ -23,6 +23,13 @@ import { useParams } from "react-router-dom";
 }
 import withLoading from "../../hoc/withLoading";
 {
+  /*
+  导入 【AI】文章摘要 组件 
+  【前端请求】../abstractOfArticle/FrontAbstractOfArticle
+  */
+}
+import AbstractOfArticle from "../abstractOfArticle/BackAbstractOfArticle";
+{
   /*导入 图片渐变遮罩CSS  */
 }
 import "../../styles/app.css";
@@ -30,7 +37,6 @@ import "../../styles/app.css";
   /*导入 文章 数据 ../../views/article/articleShow/articleShow.json*/
 }
 import datas from "../../views/article/articleShow/articleShow.json";
-import AbstractOfArticle from "../AiAbstractOfArticle";
 
 {
   /*（接口）定义 ArticleItem 接口以增强类型安全性 */
