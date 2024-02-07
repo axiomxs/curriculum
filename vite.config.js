@@ -1,11 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import envCompatible from "vite-plugin-env-compatible";
 import md from "vite-plugin-md";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    envCompatible(),
     md({
       // 其他选项...
       markdownItOptions: {

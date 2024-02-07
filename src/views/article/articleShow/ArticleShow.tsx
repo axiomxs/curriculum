@@ -67,8 +67,11 @@ export const ArticleShow: React.FC = () => {
             <div className="flex flex-col justify-between w-full h-36 md:h-[220px] xl:h-[174px] p-6 lg:p-10 xl:p-6 bg-white rounded-b-xl cursor-pointer">
               <div className="flex flex-col justify-between items-start">
                 <div className="flex gap-2.5">
-                  {item.sort.map((sort) => (
-                    <p className="hidden md:block mb-2 text-xs text-black font-bold text-red-500 leading-2">
+                  {item.sort.map((sort, index) => (
+                    <p
+                      className="hidden md:block mb-2 text-xs text-black font-bold text-red-500 leading-2"
+                      key={index}
+                    >
                       {sort}
                     </p>
                   ))}

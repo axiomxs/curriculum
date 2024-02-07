@@ -28,7 +28,7 @@ import withLoading from "../../hoc/withLoading";
   【前端请求】../abstractOfArticle/FrontAbstractOfArticle
   */
 }
-import AbstractOfArticle from "../abstractOfArticle/BackAbstractOfArticle";
+import AbstractOfArticle from "../abstractOfArticle/FrontAbstractOfArticle";
 {
   /*导入 图片渐变遮罩CSS  */
 }
@@ -101,8 +101,11 @@ const Article = () => {
       />
       <div className="relative flex flex-col w-full md:w-[70%] lg:w-[980px] xl:w-full h-fit mt-16 mb-2 px-10 xl:px-20 z-20">
         <div className="flex gap-2.5">
-          {data[0].sort.map((sort) => (
-            <span className="w-fit px-3 py-1 bg-white/25 rounded-xl text-black font-bold text-center hover:bg-white transition-all duration-300 ease-in-out transform-gpu">
+          {data[0].sort.map((sort, index) => (
+            <span
+              className="w-fit px-3 py-1 bg-white/25 rounded-xl text-black font-bold text-center hover:bg-white transition-all duration-300 ease-in-out transform-gpu"
+              key={index}
+            >
               {sort}
             </span>
           ))}
@@ -138,7 +141,7 @@ const Article = () => {
             </span>
           </div>
           <div className="mt-3 py-2 px-3 bg-white rounded-xl text-lg text-black text-left">
-            <AbstractOfArticle inputText={mdContent} />
+            <AbstractOfArticle text={mdContent} />
           </div>
           <div className="pt-2 px-3 text-base text-[#363636]">
             此内容根据文章生成，并经过人工审核，仅用于文章内容的解释与总结
