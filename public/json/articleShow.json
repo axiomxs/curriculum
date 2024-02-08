@@ -98,5 +98,14 @@
     "sort": ["CSS"],
     "date": "2023-10-29",
     "abstract": "-"
+  },
+  {
+    "id": 11,
+    "address": "geminiproxyforcf",
+    "img": "https://www.dmoe.cc/random.php",
+    "title": "使用 CloudFlare 实现在大陆访问 Gemini Api",
+    "author": "By LingJue 📸",
+    "sort": ["CloudFlare", "Gemini"],
+    "date": "2024-02-08"
   }
 ]

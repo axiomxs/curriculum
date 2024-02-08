@@ -35,7 +35,13 @@ const AbstractOfArticle = ({ text }: Props) => {
 
       try {
         const API_KEY = "AIzaSyCUczeFUpFdTzMvBfFbV6fCoz6Z5KNAKho";
-        const API_URL = `https://gemini.baipiao.io/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
+        {
+          /*
+          主：https://gemini.qing.pw/v1beta/
+          备：https://gemini.baipiao.io/v1beta/
+          */
+        }
+        const API_URL = `https://gemini.qing.pw/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
         const prompt = `请将这段话用简短的语言概括成文章摘要，生成字数不超过200字：${text}`;
         const requestBody = {
           contents: [
