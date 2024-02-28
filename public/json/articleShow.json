@@ -102,10 +102,19 @@
   {
     "id": 11,
     "address": "geminiproxyforcf",
-    "img": "https://www.dmoe.cc/random.php",
+    "img": "https://telegraph-image-6cq.pages.dev/file/4c93394974fa5b3829999.jpg",
     "title": "使用 CloudFlare 实现在大陆访问 Gemini Api",
     "author": "By LingJue 📸",
     "sort": ["CloudFlare", "Gemini"],
     "date": "2024-02-08"
+  },
+  {
+    "id": 12,
+    "address": "wake-up-after-the-golden-hour",
+    "img": "https://telegraph-image-6cq.pages.dev/file/5154df1e5fe63a5d63e81.png",
+    "title": "读书笔记：《起床后的黄金一小时》",
+    "author": "By LingJue 📸",
+    "sort": ["阅读笔记", "起床后的黄金一小时"],
+    "date": "2024-02-12"
   }
 ]

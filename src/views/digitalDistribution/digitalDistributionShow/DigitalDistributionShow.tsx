@@ -44,7 +44,7 @@ export const DigitalDistributionShow: React.FC = () => {
         <div className="flex justify-center">
           <img src={left} className="-pt-3 lg:pt-3" />
           <span className="pt-1 sm:pt-1 md:pt-1 lg:pt-1 text-4xl sm:text-5xl lg:text-7xl font-bold tracking-wider text-[#e30000]">
-            数字书架
+            数字出版物
           </span>
           <img src={right} className="-pt-3 lg:pt-3" />
         </div>

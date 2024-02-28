@@ -52,38 +52,40 @@ export const ArticleShow: React.FC = () => {
           <Link
             to={`/article/${item.address}`}
             key={item.id}
-            className="group flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-col w-full h-fit mt-4 mb-3 xl:mt-1 xl:mb-3 border border-[#f0f0f0] hover:border-[#ffc848] rounded-xl cursor-pointer overflow-hidden shadow-lg md:shadow-none shadow-true-gray-200 transition duration-300 ease-in-out transform-gpu hover:shadow-lg"
+            className="group flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-col w-full h-fit mt-4 mb-3 xl:mt-1 xl:mb-3 border border-[#f0f0f0] hover:border-[#ffc848] rounded-xl cursor-pointer overflow-hidden shadow-xl md:shadow-none shadow-true-gray-200 transition duration-500 ease-in-out transform-gpu hover:shadow-lg"
           >
             <LazyLoad
-              className="flex w-full md:w-4/5 lg:w-4/5 xl:w-full h-[170px] md:h-[220px] xl:h-[225px] xl:rounded-t-xl overflow-hidden duration-300 ease-in-out md:filter md:group-hover:brightness-90 transition"
               height={(window.innerHeight as number) * 1.2}
               offset={[-100, 0]}
             >
-              <img
-                src={item.img}
-                className="w-full h-full xl:rounded-t-xl object-cover transition-all duration-300 ease-in-out opacity-100 md:group-hover:scale-105 md:group-hover:opacity-90 transform-gpu"
-              />
-            </LazyLoad>
-            <div className="flex flex-col justify-between w-full h-36 md:h-[220px] xl:h-[174px] p-6 lg:p-10 xl:p-6 bg-white rounded-b-xl cursor-pointer">
-              <div className="flex flex-col justify-between items-start">
-                <div className="flex gap-2.5">
-                  {item.sort.map((sort, index) => (
-                    <p
-                      className="hidden md:block mb-2 text-xs text-black font-bold text-red-500 leading-2"
-                      key={index}
-                    >
-                      {sort}
-                    </p>
-                  ))}
+              <div className="flex w-full md:w-4/5 lg:w-4/5 xl:w-full h-[170px] md:h-[220px] xl:h-[225px] xl:rounded-t-xl overflow-hidden duration-500 ease-in-out md:filter md:group-hover:brightness-90 transition">
+                <img
+                  src={item.img}
+                  className="w-full h-full xl:rounded-t-xl object-cover transition-all duration-500 ease-in-out opacity-100 md:group-hover:scale-105 transform-gpu"
+                />
+              </div>
+
+              <div className="flex flex-col justify-between w-full h-36 md:h-[220px] xl:h-[174px] p-6 lg:p-10 xl:p-6 bg-white rounded-b-xl cursor-pointer">
+                <div className="flex flex-col justify-between items-start">
+                  <div className="flex gap-2.5">
+                    {item.sort.map((sort, index) => (
+                      <p
+                        className="hidden md:block mb-2 text-xs text-black font-bold text-red-500 leading-2"
+                        key={index}
+                      >
+                        {sort}
+                      </p>
+                    ))}
+                  </div>
+                  <p className="text-xl md:text-xl lg:text-2xl text-black group-hover:text-[#ffc848] line-clamp-2 leading-tight md:leading-tight lg:leading-tight font-bold text-wrap transition duration-300 ease-in-out transform-gpu ">
+                    {item.title}
+                  </p>
                 </div>
-                <p className="text-xl md:text-xl lg:text-2xl text-black group-hover:text-[#ffc848] line-clamp-2 leading-tight md:leading-tight lg:leading-tight font-bold text-wrap transition duration-300 ease-in-out transform-gpu ">
-                  {item.title}
+                <p className="mt-2 text-sm text-black font-semibold">
+                  {item.date}
                 </p>
               </div>
-              <p className="mt-2 text-sm text-black font-semibold">
-                {item.date}
-              </p>
-            </div>
+            </LazyLoad>
           </Link>
         ))}
       </div>

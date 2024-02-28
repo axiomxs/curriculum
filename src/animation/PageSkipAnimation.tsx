@@ -2,43 +2,46 @@
   /*导入 React、useState、useEffect */
 }
 import React, { useState, useEffect } from "react";
+{
+  /*导入动画样式 */
+}
+import "../styles/animation.css";
 
 const PageSkipAnimation = () => {
   {
-    /*创建一个名为 isShow 的状态，表示是否显示动画 */
+    /*使用useState和useEffect来控制动画的显示和隐藏*/
   }
   const [isShow, setIsShow] = useState(false);
-
+  {
+    /*设置动画的显示和隐藏，1.5秒后关闭动画 */
+  }
   useEffect(() => {
-    {
-      /*在组件挂载后等待0.5秒，然后将 isShow 设置为 true，让动画内容开始显现 */
-    }
     setTimeout(() => {
       setIsShow(true);
-      {
-        /*在第一个回调之后2.5秒，将 isShow 设置回 false，让动画内容在显示2秒后消失 */
-      }
-      setTimeout(() => {
+      const hideTimeoutId = setTimeout(() => {
         setIsShow(false);
-      }, 2000);
-    }, 500);
+      }, 1500);
+
+      return () => clearTimeout(hideTimeoutId);
+    }, 0);
   }, []);
 
   return (
     <div
-      className={`flex justify-center items-center h-screen w-screen transition-opacity duration-1000 overflow-hidden ${
-        isShow ? "opacity-100" : "opacity-0"
+      className={`flex justify-center items-center h-screen bg-white overflow-hidden ${
+        isShow ? "show" : ""
       }`}
     >
-      <h1
-        className={`text-center text-5xl lg:text-7xl text-black transition-opacity duration-1000 z-50 ${
-          isShow ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        Ling Jue
-      </h1>
+      <div className="animation flex text-black text-5xl text-center">
+        <span>L</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>&nbsp;
+        <span>J</span>
+        <span>u</span>
+        <span>e</span>
+      </div>
     </div>
   );
 };
-
 export default PageSkipAnimation;

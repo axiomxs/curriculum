@@ -4,6 +4,7 @@
   box-sizing: border-box;
   user-select: none;
 }
+/* user-select: none; */
 body {
   background-color: white;
 }
@@ -58,18 +59,25 @@ pre::before {
   background-color: #f7f7f9;
   text-align: center;
   font-weight: bold;
+  user-select: text;
 }
 
 code {
   width: 100%;
   max-width: full;
+  margin-left: 2px;
+  margin-right: 2px;
   padding-top: 8px;
   padding-bottom: 8px;
+  color: rgb(219 39 119);
   overflow-x: auto;
+  user-select: text;
 }
-.article-left {
-  width: calc(100% - 300px);
+p {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
-.article-width {
-  width: calc(100% / 2 - 0.5rem);
+p img {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }

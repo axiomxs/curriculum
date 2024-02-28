@@ -28,7 +28,7 @@ export default function withLoading(WrappedComponent) {
         {
           /*将 isRendered 状态设置为 false，隐藏动画，显示 WrappedComponent 组件 */
         }
-      }, 3500);
+      }, 1500);
       {
         /*清理函数*/
       }
