@@ -14,6 +14,11 @@ import { motion } from "framer-motion";
 }
 import LazyLoad from "react-lazyload";
 {
+  /*导入灯箱 */
+}
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+{
   /*导入图片展示数据  ./photosShow.json*/
 }
 import datas from "../../../../public/json/photosShow.json";
@@ -103,6 +108,17 @@ export const PhotosShow = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollDistance]);
+  {
+    /*灯箱，销毁 （隐藏缩略图）*/
+  }
+  useEffect(() => {
+    Fancybox.bind('[data-fancybox="viewer"]', {
+      Thumbs: false,
+    });
+    return () => {
+      Fancybox.destroy();
+    };
+  }, []);
 
   {
     /*（动画）图片展示盒子出现在页面时的渐入动画 */
@@ -176,7 +192,9 @@ export const PhotosShow = () => {
             offset={[-100, 0]}
           >
             <div className="w-full lg:h-[650px]">
-              <img src={item.img} className="w-full h-full object-cover" />
+              <a data-fancybox="viewer" href={item.img}>
+                <img src={item.img} className="w-full h-full object-cover" />
+              </a>
             </div>
           </LazyLoad>
           {/*通过对id的奇偶区分，分别设置样式，实现【文字】块棋格布局 */}
